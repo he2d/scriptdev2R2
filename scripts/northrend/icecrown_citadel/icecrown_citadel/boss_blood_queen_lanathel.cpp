@@ -26,7 +26,7 @@ EndScriptData */
 
 enum BossSpells
 {
-        SPELL_BERSERK                           = 47008,
+        //SPELL_BERSERK                           = 47008,
         SPELL_SHROUD_OF_SORROW                  = 72981,
         SPELL_DELRIOUS_SLASH                    = 71623,
         SPELL_BLOOD_MIRROR                      = 70445,
@@ -261,11 +261,11 @@ struct MANGOS_DLL_DECL boss_blood_queen_lanathelAI : public BSWScriptedAI
             --bloodbolts;
         };
 
-        if (timedQuery(SPELL_BERSERK, diff))
-        {
-             doCast(SPELL_BERSERK);
-             DoScriptText(-1631332,m_creature);
-        };
+//        if (timedQuery(SPELL_BERSERK, diff))
+//        {
+//             doCast(SPELL_BERSERK);
+//             DoScriptText(-1631332,m_creature);
+//        };
 
     }
 };

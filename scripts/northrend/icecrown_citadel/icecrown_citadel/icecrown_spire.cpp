@@ -25,7 +25,7 @@ EndScriptData */
 #include "icecrown_citadel.h"
 enum
 {
-        SPELL_BERSERK                           = 47008,
+        //SPELL_BERSERK                           = 47008,
         SPELL_FROST_BREATH                      = 70116,
         SPELL_BLIZZARD                          = 70362,
         SPELL_CLEAVE                            = 70361,
@@ -64,7 +64,7 @@ struct MANGOS_DLL_DECL mob_spire_frostwyrmAI : public BSWScriptedAI
             case 0:
                     break;
             case 1:
-                    doCast(SPELL_BERSERK);
+//                    doCast(SPELL_BERSERK);
                     stage = 2;
                     break;
             case 2:
@@ -78,7 +78,7 @@ struct MANGOS_DLL_DECL mob_spire_frostwyrmAI : public BSWScriptedAI
 
         if (m_creature->GetHealthPercent() < 10.0f && stage == 0) stage = 1;
 
-        timedCast(SPELL_BERSERK, diff);
+//        timedCast(SPELL_BERSERK, diff);
 
         DoMeleeAttackIfReady();
 
@@ -135,7 +135,7 @@ struct MANGOS_DLL_DECL mob_frost_giantAI : public BSWScriptedAI
             case 0:
                     break;
             case 1:
-                    doCast(SPELL_BERSERK);
+//                    doCast(SPELL_BERSERK);
                     stage = 2;
                     break;
             case 2:
@@ -147,7 +147,7 @@ struct MANGOS_DLL_DECL mob_frost_giantAI : public BSWScriptedAI
 
         if (m_creature->GetHealthPercent() < 2.0f && stage == 0) stage = 1;
 
-        timedCast(SPELL_BERSERK, diff);
+//        timedCast(SPELL_BERSERK, diff);
 
         DoMeleeAttackIfReady();
 

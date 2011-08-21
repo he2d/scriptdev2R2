@@ -483,12 +483,12 @@ bool GossipHello_npc_jaina_and_sylvana_HRintro(Player* pPlayer, Creature* pCreat
     switch(pCreature->GetEntry())
     {
        case NPC_JAINA:
-            pPlayer->ADD_GOSSIP_ITEM_ID(GOSSIP_ICON_CHAT, -3594536, GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
-            pPlayer->ADD_GOSSIP_ITEM_ID(GOSSIP_ICON_CHAT, -3594537, GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2);
+            pPlayer->ADD_GOSSIP_ITEM_ID(GOSSIP_ICON_CHAT, -3594536, GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2);
+            //pPlayer->ADD_GOSSIP_ITEM_ID(GOSSIP_ICON_CHAT, -3594537, GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2);
             break;
        case NPC_SYLVANA:
-            pPlayer->ADD_GOSSIP_ITEM_ID(GOSSIP_ICON_CHAT, -3594538, GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
-            pPlayer->ADD_GOSSIP_ITEM_ID(GOSSIP_ICON_CHAT, -3594539, GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2);
+            pPlayer->ADD_GOSSIP_ITEM_ID(GOSSIP_ICON_CHAT, -3594538, GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2);
+            //pPlayer->ADD_GOSSIP_ITEM_ID(GOSSIP_ICON_CHAT, -3594539, GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2);
             break;
     }
 
@@ -1229,7 +1229,7 @@ struct MANGOS_DLL_DECL npc_queldelar_horAI : public ScriptedAI
     void Reset()
     {
         intro = false;
-        m_creature->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NON_ATTACKABLE);
+        m_creature->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_PVP_ATTACKABLE);
     }
 
     void MoveInLineOfSight(Unit* pWho)

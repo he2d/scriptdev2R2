@@ -162,6 +162,8 @@ struct MANGOS_DLL_DECL instance_halls_of_reflection : public BSWScriptedInstance
                                                         pPortal->SetRespawnTime(DAY);
                                                     };
                                             }
+											if (uiData == FAIL)
+                                                DoCloseDoor(GO_ICECROWN_DOOR_3);
                 break;
             case TYPE_HALLS:                m_auiEncounter[uiType] = uiData; break;
             case DATA_SUMMONS:              if (uiData == 3) m_uiSummons = 0;

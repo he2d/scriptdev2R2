@@ -56,22 +56,22 @@ static t_Locations PortalLoc[]=
 {
 {-3050001,603, -706.122f, -92.6024f, 430.176f, 4.19f, SPELL_TELEPORT_BASE_CAMP,   true,true, TYPE_LEVIATHAN},  // base camp
 {-3050002,603, 131.248f,  -35.3802f, 410.104f, 0,     SPELL_TELEPORT_GROUNDS,     true,true, TYPE_LEVIATHAN_TP},  // formation ground
-{-3050003,603, 553.233f,  -12.3247f, 409.979f, 0,     SPELL_TELEPORT_FORGE,       false,true,TYPE_LEVIATHAN}, //
-{-3050004,603, 926.292f,  -11.4635f, 418.895f, 3.19f, SPELL_TELEPORT_SCRAPYARD,   false,true,TYPE_XT002_TP},        //
-{-3050005,603, 1498.09f,  -24.246f,  421.267f, 0,     SPELL_TELEPORT_ANTECHAMBER, false,true,TYPE_XT002},        //
-{-3050006,603, 1859.45f,  -24.1f,    449.2f,   0,     SPELL_TELEPORT_WALKWAY,     false,true,TYPE_KOLOGARN},        //
-{-3050007,603, 2086.27f,  -24.3134f, 421.539f, 0,     SPELL_TELEPORT_CONSERVATORY,false,true,TYPE_AURIAYA},         //
-{-3050008,603, 2517.3979f, 2568.89f, 412.99f,  6.17f, SPELL_TELEPORT_SPARK,       false,true,TYPE_MIMIRON_TP},          //
-{-3050009,603, 1854.782f, -11.3819f, 335.27f,  5.86f, SPELL_TELEPORT_PRISON,      false,true,TYPE_VEZAX},           //
+{-3050003,603, 553.233f,  -12.3247f, 409.979f, 0,     SPELL_TELEPORT_FORGE,       true,true,TYPE_LEVIATHAN}, //
+{-3050004,603, 926.292f,  -11.4635f, 418.895f, 3.19f, SPELL_TELEPORT_SCRAPYARD,   true,true,TYPE_XT002_TP},        //
+{-3050005,603, 1498.09f,  -24.246f,  421.267f, 0,     SPELL_TELEPORT_ANTECHAMBER, true,true,TYPE_XT002},        //
+{-3050006,603, 1859.45f,  -24.1f,    449.2f,   0,     SPELL_TELEPORT_WALKWAY,     true,true,TYPE_KOLOGARN},        //
+{-3050007,603, 2086.27f,  -24.3134f, 421.539f, 0,     SPELL_TELEPORT_CONSERVATORY,true,true,TYPE_AURIAYA},         //
+{-3050008,603, 2517.3979f, 2568.89f, 412.99f,  6.17f, SPELL_TELEPORT_SPARK,       true,true,TYPE_MIMIRON_TP},          //
+{-3050009,603, 1854.782f, -11.3819f, 335.27f,  5.86f, SPELL_TELEPORT_PRISON,      true,true,TYPE_VEZAX},           //
 };
 
 
 bool GOGossipSelect_go_ulduar_teleporter(Player *pPlayer, GameObject* pGo, uint32 sender, uint32 action)
 {
     int32 damage = 0;
-    if(sender != GOSSIP_SENDER_MAIN) return false;
+    if(sender != GOSSIP_SENDER_MAIN) return true;
 
-    if(!pPlayer->getAttackers().empty()) return false;
+    if(!pPlayer->getAttackers().empty()) return true;
 
     if(action >= 0 && action <= PORTALS_COUNT)
     pPlayer->TeleportTo(PortalLoc[action].map_num, PortalLoc[action].x, PortalLoc[action].y, PortalLoc[action].z, PortalLoc[action].o);

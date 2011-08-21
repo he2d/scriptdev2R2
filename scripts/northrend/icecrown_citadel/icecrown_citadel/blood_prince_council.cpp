@@ -26,7 +26,7 @@ EndScriptData */
 
 enum BossSpells
 {
-        SPELL_BERSERK                           = 47008,
+        //SPELL_BERSERK                           = 47008,
         SPELL_FAKE_DEATH                        = 71598,
 
         //Darkfallen Orb
@@ -210,11 +210,11 @@ struct MANGOS_DLL_DECL boss_valanar_iccAI : public BSWScriptedAI
             timedCast(SPELL_SHOCK_VORTEX, uiDiff);
         }
 
-        if (timedQuery(SPELL_BERSERK, uiDiff))
-        {
-             doCast(SPELL_BERSERK);
-             DoScriptText(-1631305,m_creature);
-         };
+ //       if (timedQuery(SPELL_BERSERK, uiDiff))
+ //       {
+ //            doCast(SPELL_BERSERK);
+ //            DoScriptText(-1631305,m_creature);
+ //        };
 
         DoMeleeAttackIfReady();
     }
@@ -376,11 +376,11 @@ struct MANGOS_DLL_DECL boss_taldaram_iccAI : public BSWScriptedAI
                 ballscount = 1;
          }
 
-        if (timedQuery(SPELL_BERSERK, uiDiff))
-        {
-            doCast(SPELL_BERSERK);
-            DoScriptText(-1631305,m_creature);
-        };
+//        if (timedQuery(SPELL_BERSERK, uiDiff))
+//        {
+//            doCast(SPELL_BERSERK);
+//            DoScriptText(-1631305,m_creature);
+//        };
 
         DoMeleeAttackIfReady();
     }
@@ -532,11 +532,11 @@ struct MANGOS_DLL_DECL boss_keleseth_iccAI : public BSWScriptedAI
             timedCast(SPELL_SHADOW_RESONANCE, uiDiff);
         }
 
-        if (timedQuery(SPELL_BERSERK, uiDiff))
-        {
-            doCast(SPELL_BERSERK);
-            DoScriptText(-1631305,m_creature);
-        };
+//        if (timedQuery(SPELL_BERSERK, uiDiff))
+//        {
+//            doCast(SPELL_BERSERK);
+//            DoScriptText(-1631305,m_creature);
+//        };
 
         DoMeleeAttackIfReady();
     }

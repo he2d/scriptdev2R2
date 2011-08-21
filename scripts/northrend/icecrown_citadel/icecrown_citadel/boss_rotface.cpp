@@ -29,10 +29,10 @@ enum BossSpells
     SPELL_OOZE_FLOOD         = 69789,
     SPELL_OOZE_FLOOD_0       = 69788,
     SPELL_OOZE_FLOOD_1       = 69783,
-    SPELL_SLIME_SPRAY        = 69508,
-    SPELL_MUTATED_INFECTION_AURA  = 69674,
+    //SPELL_SLIME_SPRAY        = 69508,
+    //SPELL_MUTATED_INFECTION_AURA  = 69674,
     SPELL_MUTATED_INFECTION  = 70003,
-    SPELL_BERSERK            = 47008,
+    //SPELL_BERSERK            = 47008,
 
     SPELL_STICKY_OOZE        = 69774,
     SPELL_STICKY_AURA        = 69776,
@@ -162,23 +162,23 @@ struct MANGOS_DLL_DECL boss_rotfaceAI : public BSWScriptedAI
                    }
               };
 
-        if (timedQuery(SPELL_SLIME_SPRAY, diff))
-            if (doSummon(NPC_OOZE_SPRAY_STALKER))
-                doCast(SPELL_SLIME_SPRAY);
+//        if (timedQuery(SPELL_SLIME_SPRAY, diff))
+//            if (doSummon(NPC_OOZE_SPRAY_STALKER))
+//                doCast(SPELL_SLIME_SPRAY);
 
         if (timedQuery(SPELL_MUTATED_INFECTION, diff))
         {
             for(uint8 i = 0; i < getSpellData(SPELL_MUTATED_INFECTION); ++i)
-                if (Unit* pTarget = doSelectRandomPlayer(SPELL_MUTATED_INFECTION_AURA, false, 60.0f))
-                     doCast(SPELL_MUTATED_INFECTION, pTarget);
+//                if (Unit* pTarget = doSelectRandomPlayer(SPELL_MUTATED_INFECTION_AURA, false, 60.0f))
+//                     doCast(SPELL_MUTATED_INFECTION, pTarget);
             DoScriptText(-1631226,m_creature);
-        }
-
-        if (timedQuery(SPELL_BERSERK, diff))
-        {
-            doCast(SPELL_BERSERK);
-            DoScriptText(-1631225,m_creature);
         };
+
+//        if (timedQuery(SPELL_BERSERK, diff))
+//        {
+//            doCast(SPELL_BERSERK);
+//            DoScriptText(-1631225,m_creature);
+//        };
 
         DoMeleeAttackIfReady();
     }

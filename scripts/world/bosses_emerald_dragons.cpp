@@ -42,10 +42,10 @@ enum
     SPELL_MARK_OF_NATURE_AURA       = 25041,
     SPELL_SEEPING_FOG_R             = 24813,                // Summons 15224 'Dream Fog'
     SPELL_SEEPING_FOG_L             = 24814,
-    SPELL_DREAM_FOG                 = 24777,                // Used by summoned Adds
+    //SPELL_DREAM_FOG                 = 24777,                // Used by summoned Adds
     SPELL_NOXIOUS_BREATH            = 24818,
     SPELL_TAILSWEEP                 = 15847,
-    SPELL_SUMMON_PLAYER             = 24776,                // NYI
+    //SPELL_SUMMON_PLAYER             = 24776,                // NYI
 
     NPC_DREAM_FOG                   = 15224,
 };
@@ -88,8 +88,8 @@ struct MANGOS_DLL_DECL boss_emerald_dragonAI : public ScriptedAI
         if (Unit* pTarget = m_creature->SelectAttackingTarget(ATTACKING_TARGET_RANDOM, 0))
             pSummoned->AI()->AttackStart(pTarget);
 
-        if (pSummoned->GetEntry() == NPC_DREAM_FOG)
-            pSummoned->CastSpell(pSummoned, SPELL_DREAM_FOG, true, NULL, NULL, m_creature->GetObjectGuid());
+//        if (pSummoned->GetEntry() == NPC_DREAM_FOG)
+//            pSummoned->CastSpell(pSummoned, SPELL_DREAM_FOG, true, NULL, NULL, m_creature->GetObjectGuid());
     }
 
     // Return true, if succeeded

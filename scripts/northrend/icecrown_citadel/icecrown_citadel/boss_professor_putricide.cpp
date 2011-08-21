@@ -77,7 +77,7 @@ enum BossSpells
     SPELL_SLIME_PUDDLE            = 70343,
     SPELL_SLIME_PUDDLE_AURA       = 70346,
 
-    SPELL_BERSERK                 = 47008,
+    //SPELL_BERSERK                 = 47008,
     QUEST_24749                   = 71518,
     SHADOW_INFUSION_AURA          = 71516,
 //
@@ -404,10 +404,10 @@ struct MANGOS_DLL_DECL boss_professor_putricideAI : public BSWScriptedAI
                     break;
             }
 
-        if (timedQuery(SPELL_BERSERK, diff)){
-                 doCast(SPELL_BERSERK);
-                 DoScriptText(-1631244,m_creature);
-                 }
+//        if (timedQuery(SPELL_BERSERK, diff)){
+//                 doCast(SPELL_BERSERK);
+//                 DoScriptText(-1631244,m_creature);
+//                 }
     }
 };
 

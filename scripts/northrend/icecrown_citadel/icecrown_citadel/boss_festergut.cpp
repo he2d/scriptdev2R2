@@ -34,7 +34,7 @@ enum BossSpells
     SPELL_BLIGHT_VISUAL_3    = 69154,
     SPELL_INHALE_BLIGHT      = 69165,
     SPELL_INHALED_BLIGHT     = 69166,
-    SPELL_PUNGENT_BLIGHT     = 69195,
+    //SPELL_PUNGENT_BLIGHT     = 69195,
     SPELL_GAS_SPORE          = 69278,
     SPELL_SPORE_AURA_0       = 69279,
     SPELL_SPORE_AURA_1       = 69290,
@@ -44,7 +44,7 @@ enum BossSpells
     SPELL_VILE_GAS           = 72272,
     SPELL_VILE_GAS_AURA      = 69244,
     SPELL_VILE_GAS_AURA_0    = 69248,
-    SPELL_BERSERK            = 47008,
+    //SPELL_BERSERK            = 47008,
 
     SPELL_GASEOUS_SPIGOT     = 71379,
 
@@ -314,12 +314,12 @@ struct MANGOS_DLL_DECL boss_festergutAI : public BSWScriptedAI
                     setStage(9);
                     break;
             case 9:
-                    if (timedQuery(SPELL_PUNGENT_BLIGHT, diff))
-                    {
-                        DoScriptText(-1631208,m_creature);
-                        doCast(SPELL_PUNGENT_BLIGHT);
-                        setStage(10);
-                    }
+//                    if (timedQuery(SPELL_PUNGENT_BLIGHT, diff))
+//                    {
+//                        DoScriptText(-1631208,m_creature);
+//                        doCast(SPELL_PUNGENT_BLIGHT);
+//                        setStage(10);
+//                    }
                     break;
             case 10:
                     if (m_creature->IsNonMeleeSpellCasted(false)) return;
@@ -350,11 +350,11 @@ struct MANGOS_DLL_DECL boss_festergutAI : public BSWScriptedAI
                        DoScriptText(-1631213,m_creature);
         };
 
-        if (timedQuery(SPELL_BERSERK, diff))
-        {
-            doCast(SPELL_BERSERK);
-            DoScriptText(-1631207,m_creature);
-        };
+//        if (timedQuery(SPELL_BERSERK, diff))
+//        {
+//            doCast(SPELL_BERSERK);
+//            DoScriptText(-1631207,m_creature);
+//        };
 
         DoMeleeAttackIfReady();
     }
