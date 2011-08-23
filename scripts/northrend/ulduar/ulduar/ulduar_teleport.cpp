@@ -71,7 +71,7 @@ bool GOGossipSelect_go_ulduar_teleporter(Player *pPlayer, GameObject* pGo, uint3
     int32 damage = 0;
     if(sender != GOSSIP_SENDER_MAIN) return true;
 
-    if(!pPlayer->getAttackers().empty()) return true;
+    if(!pPlayer->getAttackers().empty()) return false;
 
     if(action >= 0 && action <= PORTALS_COUNT)
     pPlayer->TeleportTo(PortalLoc[action].map_num, PortalLoc[action].x, PortalLoc[action].y, PortalLoc[action].z, PortalLoc[action].o);
