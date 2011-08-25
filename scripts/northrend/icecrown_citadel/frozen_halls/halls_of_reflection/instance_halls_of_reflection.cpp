@@ -103,7 +103,7 @@ struct MANGOS_DLL_DECL instance_halls_of_reflection : public BSWScriptedInstance
                                   break;
 
             case  GO_ICE_WALL:
-                                  pGo->SetPhaseMask(65535, true);
+                                  pGo->SetPhaseMask(1, true);
                                   break;
             case  GO_CAVE:
                                   pGo->SetGoState(GO_STATE_ACTIVE);;

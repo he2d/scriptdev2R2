@@ -604,11 +604,11 @@ struct MANGOS_DLL_DECL npc_jaina_and_sylvana_HRextroAI : public npc_escortAI
         if (Creature* pWallTarget = m_creature->SummonCreature(NPC_ICE_WALL,WallLoc[wallNum].x,WallLoc[wallNum].y,WallLoc[wallNum].z,WallLoc[wallNum].o,TEMPSUMMON_MANUAL_DESPAWN,0, true))
         {
             pWallTarget->SetPhaseMask(65535, true);
-            pWallTarget->setFaction(114);
-            pWallTarget->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NON_ATTACKABLE);
-            pWallTarget->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NOT_SELECTABLE);
+            //pWallTarget->setFaction(114);
+            //pWallTarget->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NON_ATTACKABLE);
+            //pWallTarget->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NOT_SELECTABLE);
             wallTarget = pWallTarget->GetObjectGuid();
-            pWallTarget->CastSpell(pWallTarget, SPELL_SUMMON_ICE_WALL, false);
+            pWallTarget->CastSpell(pWallTarget, SPELL_SUMMON_ICE_WALL, true);
         }
     }
 
