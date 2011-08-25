@@ -61,6 +61,7 @@ struct MANGOS_DLL_DECL npc_toc5_announcerAI : public ScriptedAI
 
     void Reset()
     {
+		m_creature->SetPhaseMask(65535, true);
     }
 
     void UpdateAI(const uint32 diff)

@@ -32,7 +32,7 @@ bool GossipHello_npc_event_quest_port(Player *player, Creature *_Creature)
 
 void SendDefaultMenu_npc_event_quest_port(Player *player, Creature *_Creature, uint32 action )
 {
-    if(!player->getAttackers().empty())
+    if(player->IsInCombat())
     {
         player->CLOSE_GOSSIP_MENU();
         _Creature->MonsterSay("Du befindest dich im Kampf!", LANG_UNIVERSAL);

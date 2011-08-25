@@ -101,7 +101,7 @@ void teleportPlayerToGuildHouse(Player *player, Creature *_creature)
 		return;
 	}
 
-	if (!player->getAttackers().empty())
+	if(player->IsInCombat())
 	{
 		//if player in combat
 		_creature->MonsterSay(MSG_INCOMBAT, LANG_UNIVERSAL);
