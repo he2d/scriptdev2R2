@@ -54,8 +54,8 @@ void instance_pit_of_saron::OnObjectCreate(GameObject* pGo)
     switch(pGo->GetEntry())
     {
         case GO_ICEWALL:
-            if (m_auiEncounter[TYPE_GARFROST] == DONE && m_auiEncounter[TYPE_KRICK] == DONE)
-                pGo->SetGoState(GO_STATE_ACTIVE);
+//            if (m_auiEncounter[TYPE_GARFROST] == DONE && m_auiEncounter[TYPE_KRICK] == DONE)
+//                pGo->SetGoState(GO_STATE_ACTIVE);
             break;
         case GO_HALLS_OF_REFLECT_PORT:
             break;
@@ -81,6 +81,8 @@ void instance_pit_of_saron::SetData(uint32 uiType, uint32 uiData)
             m_auiEncounter[uiType] = uiData;
             break;
         case TYPE_TYRANNUS:
+			if (uiData == DONE)
+                DoUseDoorOrButton(GO_HALLS_OF_REFLECT_PORT);
             m_auiEncounter[uiType] = uiData;
             break;
         default:
