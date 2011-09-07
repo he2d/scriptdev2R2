@@ -112,6 +112,7 @@ struct MANGOS_DLL_DECL boss_telestraAI : public ScriptedAI
 
         m_creature->RemoveFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NOT_SELECTABLE);
         m_creature->SetVisibility(VISIBILITY_ON);
+        m_creature->SetPhaseMask(65535, true);
 
         if (m_pInstance)
             m_pInstance->SetData(TYPE_TELESTRA, NOT_STARTED);
