@@ -85,6 +85,9 @@ struct MANGOS_DLL_DECL boss_eadricAI : public ScriptedAI
         HammerTarget = 0;
         m_creature->GetMotionMaster()->MovePoint(0, 746, 614, m_creature->GetPositionZ());
                 m_creature->SetWalk(true);
+        m_creature->SetPhaseMask(65535, true);
+        m_creature->setFaction(14);
+		
     }
 
     void Aggro(Unit* pWho)
@@ -189,6 +192,9 @@ struct MANGOS_DLL_DECL boss_paletressAI : public ScriptedAI
         shielded = false;
         m_creature->GetMotionMaster()->MovePoint(0, 746, 614, m_creature->GetPositionZ());
                 m_creature->SetWalk(true);
+        m_creature->SetPhaseMask(65535, true);
+        m_creature->setFaction(14);
+		
     }
 
     void JustSummoned(Creature* _summoned)
@@ -371,6 +377,9 @@ struct MANGOS_DLL_DECL mob_toc5_memoryAI : public ScriptedAI
         Old_Wounds_Timer = 5000;
         Shadows_Timer = 8000;
         Fear_Timer = 13000;
+        m_creature->SetPhaseMask(65535, true);
+        m_creature->setFaction(14);
+		
     }
 
     void JustDied(Unit* pKiller)

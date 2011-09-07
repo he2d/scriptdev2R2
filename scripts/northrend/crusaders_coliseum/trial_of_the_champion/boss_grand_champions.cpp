@@ -93,6 +93,8 @@ struct MANGOS_DLL_DECL mob_toc5_warriorAI : public ScriptedAI
         intercept_check = 1000;
         m_creature->GetMotionMaster()->MovePoint(0, 746, 614, m_creature->GetPositionZ());
                 m_creature->SetWalk(true);
+        m_creature->SetPhaseMask(65535, true);
+        m_creature->setFaction(14);
 
     }
 
@@ -217,6 +219,9 @@ struct MANGOS_DLL_DECL mob_toc5_mageAI : public ScriptedAI
         Polymorph_Timer = m_bIsRegularMode ? 12000 : 10000;
         m_creature->GetMotionMaster()->MovePoint(0, 746, 614, m_creature->GetPositionZ());
                 m_creature->SetWalk(true);
+        m_creature->SetPhaseMask(65535, true);
+        m_creature->setFaction(14);
+		
     }
 
     void Aggro(Unit* pWho)
@@ -336,6 +341,8 @@ struct MANGOS_DLL_DECL mob_toc5_shamanAI : public ScriptedAI
         Hex_Timer = m_bIsRegularMode ? 15000 : 10000;
         m_creature->GetMotionMaster()->MovePoint(0, 746, 614, m_creature->GetPositionZ());
                 m_creature->SetWalk(true);
+        m_creature->SetPhaseMask(65535, true);
+        m_creature->setFaction(14);
 
     }
 
@@ -501,6 +508,8 @@ struct MANGOS_DLL_DECL mob_toc5_hunterAI : public ScriptedAI
         disengage_check;
         m_creature->GetMotionMaster()->MovePoint(0, 746, 614, m_creature->GetPositionZ());
                 m_creature->SetWalk(true);
+        m_creature->SetPhaseMask(65535, true);
+        m_creature->setFaction(14);
 
     }
 
@@ -637,6 +646,9 @@ struct MANGOS_DLL_DECL mob_toc5_rogueAI : public ScriptedAI
         Poison_Timer = m_bIsRegularMode ? 12000 : 5000;
         m_creature->GetMotionMaster()->MovePoint(0, 746, 614, m_creature->GetPositionZ());
                 m_creature->SetWalk(true);
+        m_creature->SetPhaseMask(65535, true);
+        m_creature->setFaction(14);
+		
     }
 
     void Aggro(Unit* pWho)

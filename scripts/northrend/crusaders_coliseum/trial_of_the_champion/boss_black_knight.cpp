@@ -73,6 +73,9 @@ struct MANGOS_DLL_DECL mob_toc5_risen_ghoulAI : public ScriptedAI
     void Reset()
     {
         Attack = 2500;
+        m_creature->SetPhaseMask(65535, true);
+        m_creature->setFaction(14);
+		
     }
 
     void UpdateAI(const uint32 diff)
@@ -156,6 +159,9 @@ struct MANGOS_DLL_DECL boss_black_knightAI : public ScriptedAI
         ghoul = false;
         m_creature->GetMotionMaster()->MovePoint(0, 746, 614, m_creature->GetPositionZ());
                 m_creature->SetWalk(true);
+        m_creature->SetPhaseMask(65535, true);
+        m_creature->setFaction(14);
+		
     }
 
 
