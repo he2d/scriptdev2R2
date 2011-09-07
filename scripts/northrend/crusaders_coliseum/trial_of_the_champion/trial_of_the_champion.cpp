@@ -62,7 +62,7 @@ struct MANGOS_DLL_DECL npc_toc5_announcerAI : public ScriptedAI
     void Reset()
     {
 		m_creature->SetPhaseMask(65535, true);
-		m_creature->setFaction(14);
+		m_creature->setFaction(35);
     }
 
     void UpdateAI(const uint32 diff)
@@ -84,6 +84,11 @@ bool GossipHello_npc_toc5_announcer(Player* pPlayer, Creature* pCreature)
     ScriptedInstance* m_pInstance;
     m_pInstance = (ScriptedInstance*)pCreature->GetInstanceData();
 
+	void Reset()
+    {
+		m_creature->SetPhaseMask(65535, true);
+		m_creature->setFaction(14);
+    }
     if (!m_pInstance) return false;
 
     if(pPlayer->IsInCombat()) 

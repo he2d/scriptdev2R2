@@ -72,7 +72,7 @@ struct MANGOS_DLL_DECL npc_tempest_minionAI : public ScriptedAI
     void Init()
     {
         m_uiEvadeCheckCooldown = 2000;
-        m_uiShockTimer = 8000+rand()%4000;
+        m_uiShockTimer = 8000+rand()%400;
         m_bDead = false;
         m_bTimeToDie = false;
         m_uiRespawnTimer = 4000;
@@ -186,7 +186,7 @@ struct MANGOS_DLL_DECL npc_tempest_minionAI : public ScriptedAI
         if (m_uiShockTimer < uiDiff)
         {
             DoCastSpellIfCan(m_creature->getVictim(), SPELL_SHOCK);
-            m_uiShockTimer = 8000+rand()%4000;
+            m_uiShockTimer = 8000+rand()%400;
         }
         else
             m_uiShockTimer -= uiDiff;
@@ -354,7 +354,7 @@ struct MANGOS_DLL_DECL npc_tempest_warderAI : public ScriptedAI
 
     void Reset()
     {
-        m_uiShockTimer = 8000+rand()%4000;
+        m_uiShockTimer = 8000+rand()%400;
         m_bOvercharged = false;
         uint32 m_uiOverchargedStacksCheckTimer = 2000;
         m_bTimeToDie = false;
