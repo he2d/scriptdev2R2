@@ -280,7 +280,7 @@ struct MANGOS_DLL_DECL boss_telestraAI : public ScriptedAI
             DoScriptText(urand(SAY_SPLIT_1,SAY_SPLIT_2), m_creature);
             m_creature->CastStop();
             m_creature->RemoveAllAuras();
-            m_creature->SetVisibility(VISIBILITY_OFF);
+            m_creature->SetVisibility(VISIBILITY_ON);
             m_creature->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NOT_SELECTABLE);
 
             m_bFireMagusDead = false;
