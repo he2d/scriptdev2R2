@@ -1229,7 +1229,7 @@ struct MANGOS_DLL_DECL npc_queldelar_horAI : public ScriptedAI
     void Reset()
     {
         intro = false;
-        m_creature->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NON_ATTACKABLE);
+        m_creature->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_PVP_ATTACKABLE);
     }
 
     void MoveInLineOfSight(Unit* pWho)
