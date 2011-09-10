@@ -1,4 +1,4 @@
-/* Copyright (C) 2006 - 2010 ScriptDev2 <https://scriptdev2.svn.sourceforge.net/>
+/* Copyright (C) 2006 - 2011 ScriptDev2 <http://www.scriptdev2.com/>
  * This program is free software licensed under GPL version 2
  * Please see the included DOCS/LICENSE.TXT for more information */
 
@@ -8,13 +8,7 @@
 enum
 {
     MAX_ENCOUNTER                   = 3,
-	
-	DATA_GARFROST					= 6,
-    DATA_KRICK						= 7,
-    DATA_ICK						= 8,
-    DATA_TYRANNUS					= 9,
-    DATA_RIMEFANG					= 10,
-	
+
     TYPE_GARFROST                   = 0,
     TYPE_KRICK                      = 1,
     TYPE_TYRANNUS                   = 2,
@@ -40,7 +34,7 @@ enum
     NPC_CHAMPION_1_ALLIANCE         = 37496,
     NPC_CHAMPION_2_ALLIANCE         = 37497,
 
-    GO_ICEWALL              	    = 201885,               // open after gafrost/krick
+    GO_ICEWALL                      = 201885,               // open after gafrost/krick
     GO_HALLS_OF_REFLECT_PORT        = 201848,               // unlocked by jaina/sylvanas at last outro
 };
 

@@ -112,7 +112,6 @@ struct MANGOS_DLL_DECL boss_telestraAI : public ScriptedAI
 
         m_creature->RemoveFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NOT_SELECTABLE);
         m_creature->SetVisibility(VISIBILITY_ON);
-        m_creature->SetPhaseMask(65535, true);
 
         if (m_pInstance)
             m_pInstance->SetData(TYPE_TELESTRA, NOT_STARTED);
@@ -280,7 +279,7 @@ struct MANGOS_DLL_DECL boss_telestraAI : public ScriptedAI
             DoScriptText(urand(SAY_SPLIT_1,SAY_SPLIT_2), m_creature);
             m_creature->CastStop();
             m_creature->RemoveAllAuras();
-            m_creature->SetVisibility(VISIBILITY_ON);
+            m_creature->SetVisibility(VISIBILITY_OFF);
             m_creature->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NOT_SELECTABLE);
 
             m_bFireMagusDead = false;
