@@ -81,6 +81,16 @@ struct MANGOS_DLL_DECL boss_rimefangAI : public ScriptedAI
         m_uiIcyBlastSlowTimer   = 30000;
         m_uiMainTargetGUID.Clear();
     }
+	
+    void Aggro(Unit *who) 
+    {
+        DoScriptText(SAY_AGGRO, m_creature);
+        if (m_pInstance)
+            	m_pInstance->SetData(TYPE_TYRANNUS, IN_PROGRESS);	
+            m_creature->Unmount();
+            m_creature->SummonCreature(NPC_RIMEFANG , m_creature->GetPositionX(), m_creature->GetPositionY(), m_creature->GetPositionZ(), m_creature->GetOrientation(), TEMPSUMMON_TIMED_OR_DEAD_DESPAWN, 900000);
+            m_creature->SetHealth(m_creature->GetMaxHealth());
+    }
 
     void SetMainTarget(ObjectGuid m_uiTargetGUID)
     {
