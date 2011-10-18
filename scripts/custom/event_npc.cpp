@@ -44,8 +44,8 @@ void SendDefaultMenu_npc_event_quest_port(Player *player, Creature *_Creature, u
         case 5550: //Event-Teleports
             player->ADD_GOSSIP_ITEM( 5, "Jump-Event"			 , GOSSIP_SENDER_MAIN, 1248);
             player->ADD_GOSSIP_ITEM( 5, "Labyrinth-Event"						     , GOSSIP_SENDER_MAIN, 1249);
-            player->ADD_GOSSIP_ITEM( 5, "Sommer-Event Badesee"			 , GOSSIP_SENDER_MAIN, 1253);
-            /*player->ADD_GOSSIP_ITEM( 5, "Deadmines. 10 Silver"               , GOSSIP_SENDER_MAIN, 1250);
+            /*player->ADD_GOSSIP_ITEM( 5, "Sommer-Event Badesee"			 , GOSSIP_SENDER_MAIN, 1253);
+            player->ADD_GOSSIP_ITEM( 5, "Deadmines. 10 Silver"               , GOSSIP_SENDER_MAIN, 1250);
             player->ADD_GOSSIP_ITEM( 5, "Shadowfang Keep. 10 Silver"         , GOSSIP_SENDER_MAIN, 1251);
             player->ADD_GOSSIP_ITEM( 5, "Blackfathom Deeps. 10 Silver"       , GOSSIP_SENDER_MAIN, 1252);
             player->ADD_GOSSIP_ITEM( 5, "Razorfen Kraul. 20 Silver"          , GOSSIP_SENDER_MAIN, 1254);
@@ -290,7 +290,7 @@ case 1252://teleport player to Blackfathom Deeps
 	}
 	
 break;
-*/
+
 case 1253://teleport SOMMER EVENT BADESEE
 		
 	if (player->getLevel() >= 80)
@@ -305,6 +305,7 @@ case 1253://teleport SOMMER EVENT BADESEE
 	}
 	
 break;
+*/
 /*
 case 1254://teleport player to Razorfen Kraul
 		
