@@ -28,7 +28,7 @@ EndScriptData */
 extern DatabaseMysql SD2Database;
 
 #define MSG_GOSSIP_TELE          "Teleport zum Gildenplatz."
-#define MSG_GOSSIP_BUY           "Gildenplatz kaufen (20000 Gold)."
+#define MSG_GOSSIP_BUY           "Gildenplatz kaufen (15000 Gold)."
 #define MSG_GOSSIP_SELL          "Gildenplatz verkaufen (0 Gold). !Nicht ohne GM-Benachrichtigung!"
 #define MSG_GOSSIP_NEXTPAGE      "Next -->"
 #define MSG_INCOMBAT             "Ihr seid im Kampf."
@@ -59,7 +59,7 @@ extern DatabaseMysql SD2Database;
 #define ICON_GOSSIP_TABARD       8
 #define ICON_GOSSIP_XSWORDS      9
 
-#define COST_GH_BUY              200000000  //20000 G.
+#define COST_GH_BUY              150000000  //15000 G.
 #define COST_GH_SELL             0   //5000 G.
 
 #define GOSSIP_COUNT_MAX         10
