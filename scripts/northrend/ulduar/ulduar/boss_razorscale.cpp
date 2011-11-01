@@ -44,7 +44,7 @@ enum
     SPELL_STUN                    = 62794,
     SPELL_SUMMON_DWARF          = 62916,
     //both
-    SPELL_BERSERK                = 47008,
+    // SPELL_BERSERK                = 47008,
     DEVOURING_FLAME_VISUAL        = 63236,
     SPELL_FLAME_BREATH            = 63317,
     SPELL_FLAME_BREATH_H        = 64021,
@@ -696,7 +696,7 @@ struct MANGOS_DLL_DECL boss_razorscaleAI : public ScriptedAI
         // berserk
         if (m_uiBerserk_Timer < uiDiff && !m_bHasBerserk)
         {
-            DoCast(m_creature, SPELL_BERSERK);
+            // DoCast(m_creature, SPELL_BERSERK);
             m_bHasBerserk = true;
         }else m_uiBerserk_Timer -= uiDiff;
 

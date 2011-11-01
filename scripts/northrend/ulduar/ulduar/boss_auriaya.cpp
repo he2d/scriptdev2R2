@@ -36,7 +36,7 @@ enum
     EMOTE_DEFENDER  = -1603359,
 
     //auriaya
-    SPELL_BERSERK                = 47008,
+    // SPELL_BERSERK                = 47008,
     SPELL_GUARDIAN_SWARM        = 64396,    // broken
     SPELL_SENTINEL_BLAST        = 64389,
     SPELL_SENTINEL_BLAST_H        = 64678,
@@ -525,9 +525,9 @@ struct MANGOS_DLL_DECL boss_auriayaAI : public ScriptedAI
 
         if (m_uiEnrage_Timer < uiDiff && !m_bHasBerserk)
         {
-            DoScriptText(SAY_BERSERK, m_creature);
-            m_creature->CastStop();
-            DoCast(m_creature, SPELL_BERSERK);
+            // DoScriptText(SAY_BERSERK, m_creature);
+            // m_creature->CastStop();
+            // DoCast(m_creature, SPELL_BERSERK);
             m_bHasBerserk = true;
         }else m_uiEnrage_Timer -= uiDiff;
 

@@ -58,7 +58,7 @@ enum
     SPELL_LIGHTNING_SHOCK           = 62017,
     SPELL_CHARGE_ORB                = 62016,
     NPC_THUNDER_ORB                 = 33378,    // npc used to cast charged orb
-    SPELL_BERSERK_ADDS              = 62560,    // 5 min phase 1 -> for adds
+    // SPELL_BERSERK_ADDS              = 62560,    // 5 min phase 1 -> for adds
     SPELL_SUMMON_LIGHTNING_ORB      = 62391,
     // phase2
     SPELL_TOUTCH_OF_DOMINION        = 62565,    // not available in hard mode
@@ -67,7 +67,7 @@ enum
     SPELL_LIGHTNING_CHARGE          = 62279,
     SPELL_LIGHTNING_CHARGE_ORB      = 62466,
     SPELL_UNBALANCING_STRIKE        = 62130,
-    SPELL_BERSERK                   = 26662,    // 5 min phase 2
+    // SPELL_BERSERK                   = 26662,    // 5 min phase 2
 
     // hard mode
     SPELL_FROSTBOLT_VOLLEY          = 62580,
@@ -1113,8 +1113,8 @@ struct MANGOS_DLL_DECL boss_thorimAI : public ScriptedAI
                 if(m_uiBerserkTimer < uiDiff)
                 {
                     m_creature->InterruptNonMeleeSpells(true);
-                    DoScriptText(SAY_BERSERK, m_creature);
-                    DoCast(m_creature, SPELL_BERSERK);
+                    // DoScriptText(SAY_BERSERK, m_creature);
+                    // DoCast(m_creature, SPELL_BERSERK);
                     m_uiBerserkTimer = 30000;
                 }
                 else m_uiBerserkTimer -= uiDiff;

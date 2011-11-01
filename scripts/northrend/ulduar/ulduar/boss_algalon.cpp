@@ -65,7 +65,7 @@ enum
     SPELL_BIG_BANG                  = 64443, //Normal Big Bang
     SPELL_BIG_BANG_H                = 64584, //Heroic Big Bang
     SPELL_ASCEND                    = 64487, //Ascend to the Heavens
-    SPELL_BERSERK                   = 47008, //Berserk
+    // SPELL_BERSERK                   = 47008, //Berserk
     NPC_SMASH_TARGET_DUMMY          = 33105,
 
     // mobs
@@ -499,8 +499,8 @@ struct MANGOS_DLL_DECL boss_algalonAI : public ScriptedAI
                 // berserk
                 if(m_uiBerserk_Timer < uiDiff)
                 {
-                    DoScriptText(SAY_BERSERK, m_creature);    
-                    DoCast(m_creature, SPELL_BERSERK);
+                    // DoScriptText(SAY_BERSERK, m_creature);    
+                    // DoCast(m_creature, SPELL_BERSERK);
                     m_uiBerserk_Timer = 360000;
                 }else m_uiBerserk_Timer -= uiDiff;
 

@@ -66,7 +66,7 @@ enum
     SPELL_TOUCH_OF_EONAR_H         = 62892, //heals Freya, 24k per second
     SPELL_SUNBEAM                  = 62623,
     SPELL_SUNBEAM_H                = 62872,
-    SPELL_BERSERK                  = 47008, // 10 min
+    // SPELL_BERSERK                  = 47008, // 10 min
 
     /* HARD MODE SPELLS */
     SPELL_DRAINED_OF_POWER          = 62467,
@@ -1022,8 +1022,8 @@ struct MANGOS_DLL_DECL boss_freyaAI : public ScriptedAI
 
             if(m_uiEnrageTimer < uiDiff)
             {
-                DoScriptText(SAY_BERSERK, m_creature);
-                DoCast(m_creature, SPELL_BERSERK);
+                // DoScriptText(SAY_BERSERK, m_creature);
+                // DoCast(m_creature, SPELL_BERSERK);
                 m_uiEnrageTimer = 30000;
             }
             else m_uiEnrageTimer -= uiDiff;

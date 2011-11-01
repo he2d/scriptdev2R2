@@ -53,7 +53,7 @@ enum
     SPELL_FOCUSED_EYEBEAM_H     = 63976,
     SPELL_FOCUSED_EYEBEAM_TRIG  = 63369,
     SPELL_FOCUSED_EYEBEAM_VISUAL= 63368,
-    SPELL_ENRAGE                = 26662,
+    // SPELL_ENRAGE                = 26662,
     //left arm
     SPELL_SHOCKWAVE                = 63783,
     SPELL_SHOCKWAVE_H            = 63982,
@@ -592,8 +592,8 @@ struct MANGOS_DLL_DECL boss_kologarnAI : public ScriptedAI
 
         if(m_uiEnrageTimer < uiDiff)
         {
-            DoScriptText(SAY_BERSERK, m_creature);
-            DoCast(m_creature, SPELL_ENRAGE);
+            // DoScriptText(SAY_BERSERK, m_creature);
+            // DoCast(m_creature, SPELL_ENRAGE);
             m_uiEnrageTimer = 30000;
         }
         else m_uiEnrageTimer -= uiDiff;

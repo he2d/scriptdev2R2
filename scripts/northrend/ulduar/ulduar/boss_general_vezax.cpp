@@ -43,7 +43,7 @@ enum
     SPELL_MARK_SIMPHON          = 63278,
     SPELL_SEARING_FLAMES        = 62661,
     SPELL_SURGE_OF_DARKNESS     = 62662,
-    SPELL_BERSERK               = 26662, 
+    // SPELL_BERSERK               = 26662, 
     SPELL_SARONITE_BARRIER      = 63364,
     SPELL_SUMMON_ANIMUS         = 63145,
     SPELL_SUMMON_VAPORS         = 63081,
@@ -334,8 +334,8 @@ struct MANGOS_DLL_DECL boss_vezaxAI : public ScriptedAI
         // enrage 10 min
         if(m_uiEnrageTimer < uiDiff)
         {
-            DoScriptText(SAY_BERSERK, m_creature);
-            DoCast(m_creature, SPELL_BERSERK);
+            // DoScriptText(SAY_BERSERK, m_creature);
+            // DoCast(m_creature, SPELL_BERSERK);
             m_uiEnrageTimer = 30000;
         }
         else m_uiEnrageTimer -= uiDiff;

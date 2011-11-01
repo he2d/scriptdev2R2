@@ -51,7 +51,7 @@ enum
     SPELL_STRENGHT_OF_CREATOR2    = 64474,
     SPELL_STRENGHT_OF_CREATOR3    = 64475,
     SPELL_HASTE                    = 66045,
-    SPELL_ENRAGE                = 26662,
+    // SPELL_ENRAGE                = 26662,
     //iron construct
     SPELL_HEAT                    = 65667,
     SPELL_MOLTEN                = 62373,
@@ -416,8 +416,8 @@ struct MANGOS_DLL_DECL boss_ignisAI : public ScriptedAI
         // enrage
         if(m_uiEnrageTimer < uiDiff)
         {
-            DoScriptText(SAY_BERSERK, m_creature);
-            DoCast(m_creature, SPELL_ENRAGE);
+            // DoScriptText(SAY_BERSERK, m_creature);
+            // DoCast(m_creature, SPELL_ENRAGE);
             m_uiEnrageTimer = 30000;
         }
         else m_uiEnrageTimer -= uiDiff;

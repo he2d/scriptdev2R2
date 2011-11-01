@@ -26,7 +26,7 @@ EndScriptData */
 
 enum
 {
-    SPELL_ENRAGE                = 26662,
+    // SPELL_ENRAGE                = 26662,
 
     SPELL_FROZEN_BLOWS          = 62478,
     SPELL_FROZEN_BLOWS_H        = 63512,
@@ -551,8 +551,8 @@ struct MANGOS_DLL_DECL boss_hodirAI : public ScriptedAI
             // enrage
             if(m_uiEnrageTimer < uiDiff)
             {
-                DoScriptText(SAY_BERSERK, m_creature);
-                DoCast(m_creature, SPELL_ENRAGE);
+                // DoScriptText(SAY_BERSERK, m_creature);
+                // DoCast(m_creature, SPELL_ENRAGE);
                 m_uiEnrageTimer = 30000;
             }
             else m_uiEnrageTimer -= uiDiff;

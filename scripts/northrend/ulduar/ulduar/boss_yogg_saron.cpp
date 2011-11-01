@@ -203,7 +203,7 @@ enum
     SPELL_EMPOWERED             = 65294,    //starts with 9 stacks and loses 1 stak at 10% hp
     SPELL_EMPOWERED_AURA        = 64161,
 
-    SPELL_BERSERK               = 64166,    //extinguish all life
+    // SPELL_BERSERK               = 64166,    //extinguish all life
 
     // keepers
     // freya
@@ -832,12 +832,12 @@ struct MANGOS_DLL_DECL boss_yogg_saronAI : public ScriptedAI
         }
 
         // extinguish all life
-        if (m_uiBerserkTimer < uiDiff)
+       /* if (m_uiBerserkTimer < uiDiff)
         {
             DoCast(m_creature, SPELL_BERSERK);
             m_uiBerserkTimer = 10000;
         }
-        else m_uiBerserkTimer -= uiDiff;
+        else m_uiBerserkTimer -= uiDiff; */
     }
 };
 
