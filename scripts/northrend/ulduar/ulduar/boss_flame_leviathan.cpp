@@ -158,7 +158,7 @@ struct MANGOS_DLL_DECL boss_flame_leviathan : public ScriptedAI
         m_uiHodirFuryTimer      = 40000 + urand(1000, 10000);
         m_uiThorimHammerTimer   = 40000 + urand(1000, 10000);
 
-        m_creature->SetSpeedRate(MOVE_RUN, 0.3f);
+        m_creature->SetSpeedRate(MOVE_RUN, 0.5f);
     }
 
     void Aggro(Unit *who) 
