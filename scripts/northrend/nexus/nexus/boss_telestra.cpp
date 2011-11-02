@@ -192,8 +192,8 @@ struct MANGOS_DLL_DECL boss_telestraAI : public ScriptedAI
 
         if (m_bAppearDelay)
         {
-            m_creature->StopMoving();
-            m_creature->AttackStop();
+            // m_creature->StopMoving();
+            // m_creature->AttackStop();
 
             if (m_uiAppearDelayTimer <= uiDiff)
             {
@@ -252,9 +252,10 @@ struct MANGOS_DLL_DECL boss_telestraAI : public ScriptedAI
 
                 m_creature->GetMotionMaster()->Clear();
                 m_creature->GetMap()->CreatureRelocation(m_creature, CenterOfRoom[0][0], CenterOfRoom[0][1], CenterOfRoom[0][2], CenterOfRoom[0][3]);
-                DoCast(m_creature, SPELL_TELESTRA_BACK);
+                // DoCast(m_creature, SPELL_TELESTRA_BACK);
                 DoScriptText(SAY_MERGE, m_creature);
                 m_creature->SetVisibility(VISIBILITY_ON);
+				m_creature->SelectAttackingTarget(ATTACKING_TARGET_RANDOM, 0);
 
                 if (m_uiPhase == 1)
                     m_uiPhase = 2;
@@ -277,10 +278,10 @@ struct MANGOS_DLL_DECL boss_telestraAI : public ScriptedAI
            || (!m_bIsRegularMode && (m_uiPhase == 2) && (m_creature->GetHealth() <= (m_creature->GetMaxHealth() * 0.1))))
         {
             DoScriptText(urand(SAY_SPLIT_1,SAY_SPLIT_2), m_creature);
-            m_creature->CastStop();
-            m_creature->RemoveAllAuras();
+            // m_creature->CastStop();
+            // m_creature->RemoveAllAuras();
             m_creature->SetVisibility(VISIBILITY_OFF);
-            m_creature->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NOT_SELECTABLE);
+            // m_creature->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NOT_SELECTABLE);
 
             m_bFireMagusDead = false;
             m_bFrostMagusDead = false;
