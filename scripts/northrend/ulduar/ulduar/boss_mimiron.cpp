@@ -124,7 +124,7 @@ enum
 
     SPELL_MIMIRONS_INFERNO  = 62910,  // maybe used by rocket
     SPELL_MIMIRONS_INFERNO2 = 62909,  // maybe hard mode
-    // SPELL_BERSERK           = 26662,
+    SPELL_BERSERK           = 26662,
 
     ACHIEV_FIREFIGHTER      = 3180,
     ACHIEV_FIREFIGHTER_H    = 3189,
@@ -1636,22 +1636,22 @@ struct MANGOS_DLL_DECL boss_mimironAI : public ScriptedAI
             if(Creature* pTank = m_pInstance->instance->GetCreature(m_uiTankGUID))
             {
                 if(pTank && pTank->isAlive())
-                    // pTank->CastSpell(pTank, SPELL_BERSERK, false);
+                    pTank->CastSpell(pTank, SPELL_BERSERK, false);
             }
 
             if(Creature* pTorso = m_pInstance->instance->GetCreature(m_uiTorsoGUID))
             {
                 if(pTorso && pTorso->isAlive())
-                    // pTorso->CastSpell(pTorso, SPELL_BERSERK, false);
+                    pTorso->CastSpell(pTorso, SPELL_BERSERK, false);
             }
 
             if(Creature* pHead = m_pInstance->instance->GetCreature(m_uiHeadGUID))
             {
                 if(pHead && pHead->isAlive())
-                    // pHead->CastSpell(pHead, SPELL_BERSERK, false);
+                    pHead->CastSpell(pHead, SPELL_BERSERK, false);
             }
 
-            m_uiBerserkTimer = 330000;
+            m_uiBerserkTimer = 3300000000;
         } 
         else
             m_uiBerserkTimer -= uiDiff;

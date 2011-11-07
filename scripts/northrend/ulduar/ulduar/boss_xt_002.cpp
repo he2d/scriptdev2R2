@@ -46,7 +46,7 @@ enum
     SPELL_LIGHT_BOMB_H        = 65121,
     SPELL_GRAVITY_BOMB        = 63024,
     SPELL_GRAVITY_BOMB_H    = 64234,
-    // SPELL_ENRAGE            = 47008,
+    SPELL_ENRAGE            = 47008,
     SPELL_STUN                = 3618,
 
     // hard mode
@@ -567,14 +567,14 @@ struct MANGOS_DLL_DECL boss_xt002AI : public ScriptedAI
         // enrage timer
         if (m_uiEnrage_Timer < uiDiff && !m_bIsEnrage && !m_bPhase2)
         {
-            //DoCast(m_creature, SPELL_ENRAGE);
+            DoCast(m_creature, SPELL_ENRAGE);
             if (m_creature->HasAura(SPELL_ENRAGE))
             {
                 m_bIsEnrage = true;
                 DoScriptText(SAY_BERSERK, m_creature);
             }
             else
-                m_uiEnrage_Timer = 5000;
+                m_uiEnrage_Timer = 500000000;
         }else m_uiEnrage_Timer -= uiDiff;
 
         // adds range check

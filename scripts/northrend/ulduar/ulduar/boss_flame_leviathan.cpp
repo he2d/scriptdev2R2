@@ -206,8 +206,8 @@ struct MANGOS_DLL_DECL boss_flame_leviathan : public ScriptedAI
     void SpellHit(Unit *caster, const SpellEntry *spell)
     {
         if(spell->Id == 62472)
-        vehicle->InstallAllAccessories();
-        else if(spell->Id == SPELL_ELECTROSHOCK)
+//        vehicle->InstallAllAccessories();
+//        else if(spell->Id == SPELL_ELECTROSHOCK)
         m_creature->InterruptSpell(CURRENT_CHANNELED_SPELL);
     }
 
