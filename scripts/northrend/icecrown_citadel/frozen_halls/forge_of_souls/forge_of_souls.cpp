@@ -230,7 +230,7 @@ struct MANGOS_DLL_DECL npc_jaina_and_sylvana_FSextroAI : public ScriptedAI
         m_pInstance = (ScriptedInstance*)pCreature->GetInstanceData();
         m_creature->SetActiveObjectState(true);
         m_creature->SetPhaseMask(65535, true);
-        m_creature->setFaction(14);
+        m_creature->setFaction(35);
         Reset();
    }
 
