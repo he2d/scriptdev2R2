@@ -42,10 +42,10 @@ void SendDefaultMenu_npc_event_quest_port(Player *player, Creature *_Creature, u
     switch(action)
     {
         case 5550: //Event-Teleports
-            player->ADD_GOSSIP_ITEM( 5, "Jump-Event"			 , GOSSIP_SENDER_MAIN, 1248);
-            player->ADD_GOSSIP_ITEM( 5, "Labyrinth-Event"						     , GOSSIP_SENDER_MAIN, 1249);
-            /*player->ADD_GOSSIP_ITEM( 5, "Sommer-Event Badesee"			 , GOSSIP_SENDER_MAIN, 1253);
-            player->ADD_GOSSIP_ITEM( 5, "Deadmines. 10 Silver"               , GOSSIP_SENDER_MAIN, 1250);
+            player->ADD_GOSSIP_ITEM( 5, "Jump & Run Event-Start"			 , GOSSIP_SENDER_MAIN, 1248);
+            player->ADD_GOSSIP_ITEM( 5, "Cross-Race Event"						     , GOSSIP_SENDER_MAIN, 1249);
+            player->ADD_GOSSIP_ITEM( 5, "Jump & Run Event Port 2"			 , GOSSIP_SENDER_MAIN, 1253);
+            /*player->ADD_GOSSIP_ITEM( 5, "Deadmines. 10 Silver"               , GOSSIP_SENDER_MAIN, 1250);
             player->ADD_GOSSIP_ITEM( 5, "Shadowfang Keep. 10 Silver"         , GOSSIP_SENDER_MAIN, 1251);
             player->ADD_GOSSIP_ITEM( 5, "Blackfathom Deeps. 10 Silver"       , GOSSIP_SENDER_MAIN, 1252);
             player->ADD_GOSSIP_ITEM( 5, "Razorfen Kraul. 20 Silver"          , GOSSIP_SENDER_MAIN, 1254);
@@ -222,7 +222,7 @@ case 1248://teleport to jumpevent
 if( player->getLevel() >= 2)
 	{
 		player->CLOSE_GOSSIP_MENU();
-		player->TeleportTo(1, -11650.5f, -4692.77f,	10.52f, 4.51f);
+		player->TeleportTo(0, -4179.73f, -3065.71f,	10.64f, 5.17f);
 		//player->ModifyMoney(-0*costo);
 	} else {
 		player->CLOSE_GOSSIP_MENU();
@@ -231,17 +231,17 @@ if( player->getLevel() >= 2)
 	
 break;
 
-case 1249://teleport labyrinth
+case 1249://teleport jumpevent port 2
 		
-if (player->getLevel() >= 80)
+if (player->getLevel() >= 2)
 		
 	{
 		player->CLOSE_GOSSIP_MENU();
-		player->TeleportTo(0, -7411.13f, 797.61f, 131.41f, 4.75f);
+		player->TeleportTo(0, -4460.68f, -3214.20f, 181.68f, 3.54f);
 		//player->ModifyMoney(-0*costo);
 	} else {
 		player->CLOSE_GOSSIP_MENU();
-		_Creature->MonsterSay("Dein Charakter muss Level 80 sein!", LANG_UNIVERSAL);
+		_Creature->MonsterSay("Dein Charakter muss mind. Level 2 sein!", LANG_UNIVERSAL);
 	}
 	
 break;
@@ -290,22 +290,21 @@ case 1252://teleport player to Blackfathom Deeps
 	}
 	
 break;
-
-case 1253://teleport SOMMER EVENT BADESEE
+*/
+case 1253://teleport to MotoCross-Event
 		
 	if (player->getLevel() >= 80)
 		
 	{
 		player->CLOSE_GOSSIP_MENU();
-		player->TeleportTo(571, 6072.1772f, 5367.8613f, -91.9197f, 4.926762f);
-		//player->ModifyMoney(-2*costo);
+		player->TeleportTo(0, -7411.13f, 797.61f, 131.41f, 4.75f);
+		//player->ModifyMoney(-0*costo);
 	} else {
 		player->CLOSE_GOSSIP_MENU();
 		_Creature->MonsterSay("Dein Charakter muss Level 80 sein!", LANG_UNIVERSAL);
 	}
 	
 break;
-*/
 /*
 case 1254://teleport player to Razorfen Kraul
 		

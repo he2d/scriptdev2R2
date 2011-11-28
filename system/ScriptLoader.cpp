@@ -14,6 +14,7 @@ extern void AddSC_npc_arena_honor();
 extern void AddSC_custom_npc_guildmaster();
 extern void AddSC_npc_event_quest_port();
 extern void AddSC_npc_lightwell();
+extern void AddSC_VoteCollector();
 
 // OutdoorPvP zone scripts
 extern void AddSC_outdoor_pvp_eastern_plaguelands();
@@ -552,6 +553,7 @@ void AddScripts()
     AddSC_custom_npc_guildmaster();
     AddSC_npc_event_quest_port();
     AddSC_npc_lightwell();
+    AddSC_VoteCollector();
     AddSC_outdoor_pvp_eastern_plaguelands();                // OutdoorPvP zone scripts. Must be _before_ map scripts call!
     AddSC_outdoor_pvp_silithus();
     AddSC_outdoor_pvp_eastern_kingdoms();                   // OutdoorPvP

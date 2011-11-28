@@ -194,7 +194,7 @@ struct MANGOS_DLL_DECL boss_black_knightAI : public ScriptedAI
         {
             m_pInstance->SetData(TYPE_BLACK_KNIGHT, DONE);
         }
-        if (phase2 && !phase1 && !phase3)
+/*        if (phase2 && !phase1 && !phase3)
             if (!m_creature->isAlive())
             {
                 m_creature->Respawn();
@@ -205,7 +205,7 @@ struct MANGOS_DLL_DECL boss_black_knightAI : public ScriptedAI
             {
                 m_creature->Respawn();
                 StartPhase2();
-            }
+            }*/
     }
 
     void StartPhase2()

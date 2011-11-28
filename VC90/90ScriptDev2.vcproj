@@ -443,6 +443,10 @@
 					RelativePath="..\scripts\custom\custom_npc_guildmaster.cpp"
 					>
 				</File>
+				<File
+					RelativePath="..\scripts\custom\vote_vendor.cpp"
+					>
+				</File>
 			</Filter>
 			<Filter
 				Name="eastern_kingdoms"

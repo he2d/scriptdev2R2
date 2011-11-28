@@ -58,7 +58,7 @@ enum BossSpells
 
         //Keleseth
         SPELL_SHADOW_LANCE                      = 71405,
-        SPELL_SHADOW_LANCE_2                    = 71815,
+        //SPELL_SHADOW_LANCE_2                    = 71815,
         SPELL_SHADOW_RESONANCE                  = 71943,
         SPELL_SHADOW_RESONANCE_AURA             = 71822,
         NPC_DARK_NUCLEUS                        = 38369,
@@ -523,7 +523,7 @@ struct MANGOS_DLL_DECL boss_keleseth_iccAI : public BSWScriptedAI
                 }
             }
 
-            timedCast(SPELL_SHADOW_LANCE_2, uiDiff);
+            //timedCast(SPELL_SHADOW_LANCE_2, uiDiff);
             timedCast(SPELL_SHADOW_RESONANCE, uiDiff);
         }
         else
