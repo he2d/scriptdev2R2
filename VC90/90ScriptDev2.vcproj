@@ -444,7 +444,7 @@
 					>
 				</File>
 				<File
-					RelativePath="..\scripts\custom\vote_vendor.cpp"
+					RelativePath="..\scripts\custom\custom_winter_boss_yeti.cpp"
 					>
 				</File>
 			</Filter>
