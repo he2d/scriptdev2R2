@@ -42,9 +42,9 @@ void SendDefaultMenu_npc_event_quest_port(Player *player, Creature *_Creature, u
     switch(action)
     {
         case 5550: //Event-Teleports
-            player->ADD_GOSSIP_ITEM( 5, "Jump & Run Event-Start"			 , GOSSIP_SENDER_MAIN, 1248);
-            player->ADD_GOSSIP_ITEM( 5, "Cross-Race Event"						     , GOSSIP_SENDER_MAIN, 1249);
-            player->ADD_GOSSIP_ITEM( 5, "Jump & Run Event Port 2"			 , GOSSIP_SENDER_MAIN, 1253);
+            player->ADD_GOSSIP_ITEM( 5, "Jump/Run Event-Start"			 , GOSSIP_SENDER_MAIN, 1248);
+            player->ADD_GOSSIP_ITEM( 5, "Jump Event Port 2"		     , GOSSIP_SENDER_MAIN, 1249);
+            player->ADD_GOSSIP_ITEM( 5, "Offroad-Race Event"					 , GOSSIP_SENDER_MAIN, 1253);
             /*player->ADD_GOSSIP_ITEM( 5, "Deadmines. 10 Silver"               , GOSSIP_SENDER_MAIN, 1250);
             player->ADD_GOSSIP_ITEM( 5, "Shadowfang Keep. 10 Silver"         , GOSSIP_SENDER_MAIN, 1251);
             player->ADD_GOSSIP_ITEM( 5, "Blackfathom Deeps. 10 Silver"       , GOSSIP_SENDER_MAIN, 1252);
@@ -293,15 +293,15 @@ break;
 */
 case 1253://teleport to MotoCross-Event
 		
-	if (player->getLevel() >= 80)
+	if (player->getLevel() >= 2)
 		
 	{
 		player->CLOSE_GOSSIP_MENU();
-		player->TeleportTo(0, -7411.13f, 797.61f, 131.41f, 4.75f);
+		player->TeleportTo(0, -7417.82f, 799.946f, 131.406f, 2.84152f);
 		//player->ModifyMoney(-0*costo);
 	} else {
 		player->CLOSE_GOSSIP_MENU();
-		_Creature->MonsterSay("Dein Charakter muss Level 80 sein!", LANG_UNIVERSAL);
+		_Creature->MonsterSay("Dein Charakter muss mind. Level 2 sein!", LANG_UNIVERSAL);
 	}
 	
 break;
