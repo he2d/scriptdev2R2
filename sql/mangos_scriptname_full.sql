@@ -238,7 +238,7 @@ UPDATE instance_template SET ScriptName='instance_azjol-nerub' WHERE map=601;
 UPDATE creature_template SET ScriptName='npc_rizzle_sprysprocket' WHERE entry=23002;
 UPDATE creature_template SET ScriptName='npc_depth_charge' WHERE entry=23025;
 UPDATE gameobject_template SET ScriptName='go_southfury_moonstone' WHERE entry=185566;
-UPDATE creature_template SET ScriptName='mobs_spitelashes' WHERE entry IN (6190,6193,6194,6195,6196,7885,7886,12204,12205);
+UPDATE creature_template SET ScriptName='mobs_spitelashes' WHERE entry IN (6190,6193,6194,6195,6196);
 UPDATE creature_template SET ScriptName='npc_loramus_thalipedes' WHERE entry=7783;
 
 /* AZUREMYST ISLE */
@@ -906,6 +906,8 @@ UPDATE creature_template SET ScriptName='mob_anubisath_guardian' WHERE entry=153
 UPDATE creature_template SET ScriptName='boss_kurinnaxx' WHERE entry=15348;
 UPDATE creature_template SET ScriptName='boss_ayamiss' WHERE entry=15369;
 UPDATE creature_template SET ScriptName='boss_moam' WHERE entry=15340;
+UPDATE creature_template SET ScriptName='boss_ossirian' WHERE entry=15339;
+UPDATE gameobject_template SET ScriptName='go_ossirian_crystal' WHERE entry=180619;
 
 /* SCARLET MONASTERY */
 UPDATE instance_template SET ScriptName='instance_scarlet_monastery' WHERE map=189;
@@ -1055,7 +1057,6 @@ UPDATE creature_template SET ScriptName='boss_brutallus' WHERE entry=24882;
 UPDATE creature_template SET ScriptName='boss_kalecgos' WHERE entry=24850;
 UPDATE creature_template SET ScriptName='boss_kalecgos_humanoid' WHERE entry=24891;
 UPDATE creature_template SET ScriptName='boss_sathrovarr' WHERE entry=24892;
-UPDATE gameobject_template SET ScriptName='go_spectral_rift' WHERE entry=187055;
 DELETE FROM scripted_areatrigger WHERE entry=4853;
 INSERT INTO scripted_areatrigger VALUES (4853,'at_madrigosa');
 UPDATE creature_template SET ScriptName='boss_alythess' WHERE entry=25166;
@@ -1065,6 +1066,10 @@ UPDATE creature_template SET ScriptName='boss_muru' WHERE entry=25741;
 UPDATE creature_template SET ScriptName='boss_entropius' WHERE entry=25840;
 UPDATE creature_template SET ScriptName='npc_portal_target' WHERE entry=25770;
 UPDATE creature_template SET ScriptName='npc_void_sentinel_summoner' WHERE entry=25782;
+UPDATE creature_template SET ScriptName='boss_kiljaeden' WHERE entry=25315;
+UPDATE creature_template SET ScriptName='npc_kiljaeden_controller' WHERE entry=25608;
+UPDATE creature_template SET ScriptName='spell_dummy_npc_brutallus_cloud' WHERE entry=25703;
+UPDATE creature_template SET ScriptName='boss_felmyst' WHERE entry=25038;
 
 /* SWAMP OF SORROWS */
 UPDATE creature_template SET ScriptName='npc_galen_goodward' WHERE entry=5391;
