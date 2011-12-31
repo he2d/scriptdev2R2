@@ -451,6 +451,10 @@
 					RelativePath="..\scripts\custom\custom_winter_boss_yeti.cpp"
 					>
 				</File>
+				<File
+					RelativePath="..\scripts\custom\custom_itemnpc.cpp"
+					>
+				</File>
 			</Filter>
 			<Filter
 				Name="eastern_kingdoms"
