@@ -455,6 +455,10 @@
 					RelativePath="..\scripts\custom\custom_itemnpc.cpp"
 					>
 				</File>
+				<File
+					RelativePath="..\scripts\custom\custom_he2d_reward_npc.cpp"
+					>
+				</File>
 			</Filter>
 			<Filter
 				Name="eastern_kingdoms"
