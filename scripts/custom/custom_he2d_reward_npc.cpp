@@ -17,11 +17,11 @@ bool GossipHello_custom_he2d_reward_npc(Player *player, Creature *_Creature)
 	//Some examples of what can be done: visible menu
     player->ADD_GOSSIP_ITEM( 2, "MOUNTS"							, GOSSIP_SENDER_MAIN, 1000);
     player->ADD_GOSSIP_ITEM( 3, "MATS"								, GOSSIP_SENDER_MAIN, 2000);
-	player->ADD_GOSSIP_ITEM( 7, "PETS"								, GOSSIP_SENDER_MAIN, 3000);
+    player->ADD_GOSSIP_ITEM( 7, "PETS"								, GOSSIP_SENDER_MAIN, 3000);
     player->ADD_GOSSIP_ITEM( 10, "FREE"								, GOSSIP_SENDER_MAIN, 4000);
-    player->ADD_GOSSIP_ITEM( 10, "FREE"								, GOSSIP_SENDER_MAIN, 5000);
+    player->ADD_GOSSIP_ITEM( 10, "INVENTORY"						, GOSSIP_SENDER_MAIN, 5000);
 
-    player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetGUID());
+	player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetGUID());
     return true;
 }
 
@@ -49,7 +49,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
 			player->ADD_GOSSIP_ITEM( 3, "MATS"								, GOSSIP_SENDER_MAIN, 2000);
 			player->ADD_GOSSIP_ITEM( 7, "PETS"								, GOSSIP_SENDER_MAIN, 3000);
 			player->ADD_GOSSIP_ITEM( 10, "FREE"								, GOSSIP_SENDER_MAIN, 4000);
-			player->ADD_GOSSIP_ITEM( 10, "FREE"								, GOSSIP_SENDER_MAIN, 5000);
+			player->ADD_GOSSIP_ITEM( 10, "INVENTORY"								, GOSSIP_SENDER_MAIN, 5000);
 
 			player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetGUID());
 		}
@@ -131,20 +131,20 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
 		
 		case 5000:
 		{
-			player->ADD_GOSSIP_ITEM( 10, "1"							, GOSSIP_SENDER_MAIN, 5001);
-			player->ADD_GOSSIP_ITEM( 10, "2"							, GOSSIP_SENDER_MAIN, 5002);
-			player->ADD_GOSSIP_ITEM( 10, "3"							, GOSSIP_SENDER_MAIN, 5003);
-			player->ADD_GOSSIP_ITEM( 10, "4"							, GOSSIP_SENDER_MAIN, 5004);
+			//player->CLOSE_GOSSIP_MENU();
+			player->ADD_GOSSIP_ITEM( 10, "ANZEIGEN"						, GOSSIP_SENDER_MAIN, 5001);
 			player->ADD_GOSSIP_ITEM( 4, "[MAINMENU]"					, GOSSIP_SENDER_MAIN, 6000);
 
-			player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetGUID());
+			//player->SEND_GOSSIP_MENU(_Creature->GetNpcTextId(), _Creature->GetGUID());
 		}
 		break;
 
-		case 1101: // MOUNT 1
+		case 5001: // EIGENES INVENTAR ANZEIGEN
         {
-            player->CLOSE_GOSSIP_MENU();
-        }
+			//player->CLOSE_GOSSIP_MENU();
+			player->ADD_GOSSIP_ITEM( 4, "[MAINMENU]"					, GOSSIP_SENDER_MAIN, 6000);
+            player->SEND_VENDORLIST(_Creature->GetGUID());
+		}
         break;
 	}
 
