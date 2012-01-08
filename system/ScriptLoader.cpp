@@ -16,7 +16,6 @@ extern void AddSC_custom_npc_guildmaster();
 extern void AddSC_npc_event_quest_port();
 extern void AddSC_npc_lightwell();
 extern void AddSC_boss_custom_yeti();
-extern void AddSC_itemnpc();
 extern void AddSC_custom_he2d_reward_npc();
 
 // examples
@@ -550,7 +549,6 @@ void AddScripts()
     AddSC_npc_event_quest_port();
     AddSC_npc_lightwell();
     AddSC_boss_custom_yeti();
-	AddSC_itemnpc();
 	AddSC_custom_he2d_reward_npc();
 
     // examples
