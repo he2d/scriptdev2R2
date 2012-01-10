@@ -268,6 +268,18 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
     int32 count39 = 1;
     uint8 msg39 = player->CanStoreNewItem( NULL_BAG, NULL_SLOT, dest39, itemId39, count39, &noSpaceForCount );
 	
+	//40 Blizzard Bär
+    ItemPosCountVec dest40;
+    uint32 itemId40 = 43599;
+    int32 count40 = 1;
+    uint8 msg40 = player->CanStoreNewItem( NULL_BAG, NULL_SLOT, dest40, itemId40, count40, &noSpaceForCount );
+	
+	//41 Blizzardbärenbaby
+    ItemPosCountVec dest41;
+    uint32 itemId41 = 44819;
+    int32 count41 = 1;
+    uint8 msg41 = player->CanStoreNewItem( NULL_BAG, NULL_SLOT, dest41, itemId41, count41, &noSpaceForCount );
+	
 	if(player->IsInCombat())
     {
         player->CLOSE_GOSSIP_MENU();
@@ -275,10 +287,10 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         return;
     }
 
-	if (player->getLevel() < 80)
+	if (player->getLevel() < 70)
     {
          player->CLOSE_GOSSIP_MENU();
-        _Creature->MonsterSay("Du muss Level 80 sein!", LANG_UNIVERSAL);
+        _Creature->MonsterSay("Du muss Level 70 sein!", LANG_UNIVERSAL);
         return;
     }
 
@@ -308,18 +320,19 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
 
 		case 1100:
 		{
-			player->ADD_GOSSIP_ITEM( 2, "Zuegel des schnellen Spektraltigers"	, GOSSIP_SENDER_MAIN, 1101);
-			player->ADD_GOSSIP_ITEM( 2, "Grosser Kampfbaer"						, GOSSIP_SENDER_MAIN, 1102);
-			player->ADD_GOSSIP_ITEM( 2, "Magisches Huehnerei"					, GOSSIP_SENDER_MAIN, 1103);
-			player->ADD_GOSSIP_ITEM( 2, "Weisses Wollrhinozeros"				, GOSSIP_SENDER_MAIN, 1104);		
+			player->ADD_GOSSIP_ITEM( 2, "Zuegel des schnellen Spektraltigers  -  90 Wertmarken"	, GOSSIP_SENDER_MAIN, 1101);
+			player->ADD_GOSSIP_ITEM( 2, "Grosser Kampfbaer  -  75 Wertmarken"						, GOSSIP_SENDER_MAIN, 1102);
+			player->ADD_GOSSIP_ITEM( 2, "Magisches Huehnerei  -  75 Wertmarken"					, GOSSIP_SENDER_MAIN, 1103);
+			player->ADD_GOSSIP_ITEM( 2, "Weisses Wollrhinozeros  -  75 Wertmarken"				, GOSSIP_SENDER_MAIN, 1104);		
 		if (player->GetTeam() == ALLIANCE)
 			{			
-			player->ADD_GOSSIP_ITEM( 2, "Zaumzeug des kleinen Schimmels"				, GOSSIP_SENDER_MAIN, 1106); //allianz
+			player->ADD_GOSSIP_ITEM( 2, "Zaumzeug des kleinen Schimmels  -  75 Wertmarken"				, GOSSIP_SENDER_MAIN, 1106); //allianz
 			}
 			else
 			{
-			player->ADD_GOSSIP_ITEM( 2, "Pfeife des kleinen elfenbeinfarbenen Raptors"	, GOSSIP_SENDER_MAIN, 1105); //horde
+			player->ADD_GOSSIP_ITEM( 2, "Pfeife des kleinen elfenbeinfarbenen Raptors  -  75 Wertmarken"	, GOSSIP_SENDER_MAIN, 1105); //horde
 			}
+			player->ADD_GOSSIP_ITEM( 4, "Grosser Blizzardbaer  -  90 Wertmarken"								, GOSSIP_SENDER_MAIN, 1107);
 			player->ADD_GOSSIP_ITEM( 4, "[BACK]"								, GOSSIP_SENDER_MAIN, 1000);
 			player->ADD_GOSSIP_ITEM( 4, "[MAINMENU]"							, GOSSIP_SENDER_MAIN, 6000);
 
@@ -329,11 +342,11 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
 
 		case 1200:
 		{
-			player->ADD_GOSSIP_ITEM( 2, "Flammender Hippogryph"					, GOSSIP_SENDER_MAIN, 1201);
-			player->ADD_GOSSIP_ITEM( 2, "Himmelsross"							, GOSSIP_SENDER_MAIN, 1202);
-			player->ADD_GOSSIP_ITEM( 2, "X-51 Netherrakete"						, GOSSIP_SENDER_MAIN, 1203);
-			player->ADD_GOSSIP_ITEM( 2, "X-51 Netherrakete X-TREM"				, GOSSIP_SENDER_MAIN, 1204);
-			player->ADD_GOSSIP_ITEM( 2, "X-53 Reiserakete"						, GOSSIP_SENDER_MAIN, 1205);
+			player->ADD_GOSSIP_ITEM( 2, "Flammender Hippogryph  -  75 Wertmarken"				, GOSSIP_SENDER_MAIN, 1201);
+			player->ADD_GOSSIP_ITEM( 2, "Himmelsross  -  90 Wertmarken"							, GOSSIP_SENDER_MAIN, 1202);
+			player->ADD_GOSSIP_ITEM( 2, "X-51 Netherrakete  -  75 Wertmarken"					, GOSSIP_SENDER_MAIN, 1203);
+			player->ADD_GOSSIP_ITEM( 2, "X-51 Netherrakete X-TREM  -  90 Wertmarken"			, GOSSIP_SENDER_MAIN, 1204);
+			player->ADD_GOSSIP_ITEM( 2, "X-53 Reiserakete  -  111 Wertmarken"					, GOSSIP_SENDER_MAIN, 1205);
 			player->ADD_GOSSIP_ITEM( 4, "[BACK]"								, GOSSIP_SENDER_MAIN, 1000);
 			player->ADD_GOSSIP_ITEM( 4, "[MAINMENU]"							, GOSSIP_SENDER_MAIN, 6000);
 
@@ -343,9 +356,9 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
 
 		case 2000:
 		{
-			player->ADD_GOSSIP_ITEM( 3, "Gefrorene Kugel"						, GOSSIP_SENDER_MAIN, 2001);
-			player->ADD_GOSSIP_ITEM( 3, "Kugel des Kreuzfahrers"				, GOSSIP_SENDER_MAIN, 2002);
-			player->ADD_GOSSIP_ITEM( 3, "Urtuemliches Saronit"					, GOSSIP_SENDER_MAIN, 2003);
+			player->ADD_GOSSIP_ITEM( 3, "Gefrorene Kugel  -  15 Wertmarken"						, GOSSIP_SENDER_MAIN, 2001);
+			player->ADD_GOSSIP_ITEM( 3, "Kugel des Kreuzfahrers  -  20 Wertmarken"				, GOSSIP_SENDER_MAIN, 2002);
+			player->ADD_GOSSIP_ITEM( 3, "Urtuemliches Saronit  -  25 Wertmarken"				, GOSSIP_SENDER_MAIN, 2003);
 			player->ADD_GOSSIP_ITEM( 4, "[MAINMENU]"							, GOSSIP_SENDER_MAIN, 6000);
 
 			player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetGUID());
@@ -354,31 +367,32 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
 		
 		case 3000:
 		{
-			player->ADD_GOSSIP_ITEM( 7, "Zerglinglasso"							, GOSSIP_SENDER_MAIN, 3001);
-			player->ADD_GOSSIP_ITEM( 7, "Pandahalsband"							, GOSSIP_SENDER_MAIN, 3002);
-			player->ADD_GOSSIP_ITEM( 7, "Diablostein"							, GOSSIP_SENDER_MAIN, 3003);
-			player->ADD_GOSSIP_ITEM( 7, "Blaues Murlocei"						, GOSSIP_SENDER_MAIN, 3004);
-			player->ADD_GOSSIP_ITEM( 7, "Rosa Murlocei"							, GOSSIP_SENDER_MAIN, 3005);
-			player->ADD_GOSSIP_ITEM( 7, "Hippogryphenjunges"					, GOSSIP_SENDER_MAIN, 3006);
-			player->ADD_GOSSIP_ITEM( 7, "Netherwelpenhalsband"					, GOSSIP_SENDER_MAIN, 3007);
-			player->ADD_GOSSIP_ITEM( 7, "Lurkys Ei"								, GOSSIP_SENDER_MAIN, 3008);
-			player->ADD_GOSSIP_ITEM( 7, "Glueckstaler"							, GOSSIP_SENDER_MAIN, 3009);
-			player->ADD_GOSSIP_ITEM( 7, "Gluecksbanane"							, GOSSIP_SENDER_MAIN, 3010);
-			player->ADD_GOSSIP_ITEM( 7, "Raketenhuehnchen"						, GOSSIP_SENDER_MAIN, 3011);
-			player->ADD_GOSSIP_ITEM( 7, "Papierdrachen"							, GOSSIP_SENDER_MAIN, 3012);
-			player->ADD_GOSSIP_ITEM( 7, "Wunschwettermaschine - Prototyp 01-B"	, GOSSIP_SENDER_MAIN, 3013);
-			player->ADD_GOSSIP_ITEM( 7, "Leuchtsignal des Seelenhaendlers"		, GOSSIP_SENDER_MAIN, 3014);
-			player->ADD_GOSSIP_ITEM( 7, "Frostis Halsband"						, GOSSIP_SENDER_MAIN, 3015);
-			player->ADD_GOSSIP_ITEM( 7, "Tyraels Schwertgriff"					, GOSSIP_SENDER_MAIN, 3016);
-			player->ADD_GOSSIP_ITEM( 7, "Schweres Murlocei"						, GOSSIP_SENDER_MAIN, 3017);
-			player->ADD_GOSSIP_ITEM( 7, "Tuskarrdrachen"						, GOSSIP_SENDER_MAIN, 3018);
-			player->ADD_GOSSIP_ITEM( 7, "Spektraltigerjunges"					, GOSSIP_SENDER_MAIN, 3019);
-			player->ADD_GOSSIP_ITEM( 7, "Greifenkueken"							, GOSSIP_SENDER_MAIN, 3020);
-			player->ADD_GOSSIP_ITEM( 7, "Windreiterjunges"						, GOSSIP_SENDER_MAIN, 3021);
-			player->ADD_GOSSIP_ITEM( 7, "Pandarenmoench"						, GOSSIP_SENDER_MAIN, 3022);
-			player->ADD_GOSSIP_ITEM( 7, "Kleines Phylakterium"					, GOSSIP_SENDER_MAIN, 3023);
-			player->ADD_GOSSIP_ITEM( 7, "XT der Kleine"							, GOSSIP_SENDER_MAIN, 3024);
-			player->ADD_GOSSIP_ITEM( 7, "Mini-Thor"								, GOSSIP_SENDER_MAIN, 3025);
+			player->ADD_GOSSIP_ITEM( 7, "Zerglinglasso  -  15 Wertmarken"							, GOSSIP_SENDER_MAIN, 3001);
+			player->ADD_GOSSIP_ITEM( 7, "Pandahalsband  -  15 Wertmarken"							, GOSSIP_SENDER_MAIN, 3002);
+			player->ADD_GOSSIP_ITEM( 7, "Diablostein  -  15 Wertmarken"							, GOSSIP_SENDER_MAIN, 3003);
+			player->ADD_GOSSIP_ITEM( 7, "Blaues Murlocei  -  20 Wertmarken"						, GOSSIP_SENDER_MAIN, 3004);
+			player->ADD_GOSSIP_ITEM( 7, "Rosa Murlocei  -  20 Wertmarken"							, GOSSIP_SENDER_MAIN, 3005);
+			player->ADD_GOSSIP_ITEM( 7, "Hippogryphenjunges  -  20 Wertmarken"					, GOSSIP_SENDER_MAIN, 3006);
+			player->ADD_GOSSIP_ITEM( 7, "Netherwelpenhalsband  -  20 Wertmarken"					, GOSSIP_SENDER_MAIN, 3007);
+			player->ADD_GOSSIP_ITEM( 7, "Lurkys Ei  -  25 Wertmarken"								, GOSSIP_SENDER_MAIN, 3008);
+			player->ADD_GOSSIP_ITEM( 7, "Glueckstaler  -  25 Wertmarken"							, GOSSIP_SENDER_MAIN, 3009);
+			player->ADD_GOSSIP_ITEM( 7, "Gluecksbanane  -  25 Wertmarken"							, GOSSIP_SENDER_MAIN, 3010);
+			player->ADD_GOSSIP_ITEM( 7, "Raketenhuehnchen  -  25 Wertmarken"						, GOSSIP_SENDER_MAIN, 3011);
+			player->ADD_GOSSIP_ITEM( 7, "Papierdrachen  -  25 Wertmarken"							, GOSSIP_SENDER_MAIN, 3012);
+			player->ADD_GOSSIP_ITEM( 7, "Wunschwettermaschine - Prototyp 01-B  -  25 Wertmarken"	, GOSSIP_SENDER_MAIN, 3013);
+			player->ADD_GOSSIP_ITEM( 7, "Leuchtsignal des Seelenhaendlers  -  25 Wertmarken"		, GOSSIP_SENDER_MAIN, 3014);
+			player->ADD_GOSSIP_ITEM( 7, "Frostis Halsband  -  30 Wertmarken"						, GOSSIP_SENDER_MAIN, 3015);
+			player->ADD_GOSSIP_ITEM( 7, "Tyraels Schwertgriff  -  30 Wertmarken"					, GOSSIP_SENDER_MAIN, 3016);
+			player->ADD_GOSSIP_ITEM( 7, "Schweres Murlocei  -  30 Wertmarken"						, GOSSIP_SENDER_MAIN, 3017);
+			player->ADD_GOSSIP_ITEM( 7, "Blizzard Baerenbaby  -  30 Wertmarken"							, GOSSIP_SENDER_MAIN, 3026);
+			player->ADD_GOSSIP_ITEM( 7, "Tuskarrdrachen  -  35 Wertmarken"						, GOSSIP_SENDER_MAIN, 3018);
+			player->ADD_GOSSIP_ITEM( 7, "Spektraltigerjunges  -  35 Wertmarken"					, GOSSIP_SENDER_MAIN, 3019);
+			player->ADD_GOSSIP_ITEM( 7, "Greifenkueken  -  35 Wertmarken"							, GOSSIP_SENDER_MAIN, 3020);
+			player->ADD_GOSSIP_ITEM( 7, "Windreiterjunges  -  35 Wertmarken"						, GOSSIP_SENDER_MAIN, 3021);
+			player->ADD_GOSSIP_ITEM( 7, "Pandarenmoench  -  35 Wertmarken"						, GOSSIP_SENDER_MAIN, 3022);
+			player->ADD_GOSSIP_ITEM( 7, "Kleines Phylakterium  -  35 Wertmarken"					, GOSSIP_SENDER_MAIN, 3023);
+			player->ADD_GOSSIP_ITEM( 7, "XT der Kleine  -  40 Wertmarken"							, GOSSIP_SENDER_MAIN, 3024);
+			player->ADD_GOSSIP_ITEM( 7, "Mini-Thor  -  40 Wertmarken"								, GOSSIP_SENDER_MAIN, 3025);
 			player->ADD_GOSSIP_ITEM( 4, "[MAINMENU]"							, GOSSIP_SENDER_MAIN, 6000);
 
 			player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetGUID());
@@ -410,7 +424,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
 		break;
 */
 		case 1101:			// MOUNT - ANFANG
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 90))
             {
                 if( msg != EQUIP_ERR_OK )
 					count1 -= noSpaceForCount;
@@ -424,7 +438,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count1,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 90, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -436,7 +450,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 1102:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 75))
             {
                 if( msg != EQUIP_ERR_OK )
 					count2 -= noSpaceForCount;
@@ -450,7 +464,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count2,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 75, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -462,7 +476,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 1103:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 75))
             {
                 if( msg != EQUIP_ERR_OK )
 					count3 -= noSpaceForCount;
@@ -476,7 +490,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count3,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 75, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -488,7 +502,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 1104:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 75))
             {
                 if( msg != EQUIP_ERR_OK )
 					count4 -= noSpaceForCount;
@@ -502,7 +516,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count4,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 75, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -514,7 +528,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 1105:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 75))
             {
                 if( msg != EQUIP_ERR_OK )
 					count5 -= noSpaceForCount;
@@ -528,7 +542,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count5,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 75, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -540,7 +554,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 1106:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 75))
             {
                 if( msg != EQUIP_ERR_OK )
 					count6 -= noSpaceForCount;
@@ -554,7 +568,33 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count6,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 75, true);
+					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
+                }
+            }
+            else
+            {
+                player->CLOSE_GOSSIP_MENU();
+                _Creature->MonsterSay("Du hast nicht genug Craenkland - Wertmarken!", LANG_UNIVERSAL, NULL);
+            }
+        break;
+		
+		case 1107:
+			if(player->HasItemCount(210000, 90))
+            {
+                if( msg != EQUIP_ERR_OK )
+					count40 -= noSpaceForCount;
+                {
+                    player->CLOSE_GOSSIP_MENU();
+					_Creature->MonsterSay("Kann Item nicht erstellen! Moeglicherweise hast Du dieses Item bereits in deinem Inventar?", LANG_UNIVERSAL, NULL);
+                }
+
+                item = player->StoreNewItem( dest40, itemId40, true, Item::GenerateItemRandomPropertyId(itemId1));
+				if(count40 > 0 && item)
+                {
+                    player->CLOSE_GOSSIP_MENU();
+                    player->SendNewItem(item,count40,false,true);
+                    player->DestroyItemCount(210000, 90, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -566,7 +606,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;				// MOUNT - ENDE
 		
 		case 1201:			// FLYMOUNT - ANFANG
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 75))
             {
                 if( msg != EQUIP_ERR_OK )
 					count7 -= noSpaceForCount;
@@ -580,7 +620,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count7,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 75, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -592,7 +632,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 1202:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 90))
             {
                 if( msg != EQUIP_ERR_OK )
 					count8 -= noSpaceForCount;
@@ -606,7 +646,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count8,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 90, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -618,7 +658,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 1203:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 75))
             {
                 if( msg != EQUIP_ERR_OK )
 					count9 -= noSpaceForCount;
@@ -632,7 +672,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count9,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 75, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -644,7 +684,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 1204:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 90))
             {
                 if( msg != EQUIP_ERR_OK )
 					count10 -= noSpaceForCount;
@@ -658,7 +698,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count10,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 90, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -670,7 +710,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 1205:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 111))
             {
                 if( msg != EQUIP_ERR_OK )
 					count11 -= noSpaceForCount;
@@ -684,7 +724,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count11,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 111, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -696,7 +736,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;			// FLYMOUNT - ENDE
 		
 		case 2001:		// MATS - ANFANG
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 15))
             {
                 if( msg != EQUIP_ERR_OK )
 					count12 -= noSpaceForCount;
@@ -710,7 +750,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count12,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 15, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -722,7 +762,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 2002:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 20))
             {
                 if( msg != EQUIP_ERR_OK )
 					count13 -= noSpaceForCount;
@@ -736,7 +776,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count13,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 20, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -774,7 +814,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;			// MATS - ENDE
 		
 		case 3001:		// PETS - ANFANG
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 15))
             {
                 if( msg != EQUIP_ERR_OK )
 					count15 -= noSpaceForCount;
@@ -788,7 +828,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count15,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 15, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -800,7 +840,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 3002:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 15))
             {
                 if( msg != EQUIP_ERR_OK )
 					count16 -= noSpaceForCount;
@@ -814,7 +854,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count16,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 15, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -826,7 +866,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 3003:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 15))
             {
                 if( msg != EQUIP_ERR_OK )
 					count17 -= noSpaceForCount;
@@ -840,7 +880,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count17,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 15, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -852,7 +892,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 3004:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 20))
             {
                 if( msg != EQUIP_ERR_OK )
 					count18 -= noSpaceForCount;
@@ -866,7 +906,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count18,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 20, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -878,7 +918,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 3005:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 20))
             {
                 if( msg != EQUIP_ERR_OK )
 					count19 -= noSpaceForCount;
@@ -892,7 +932,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count19,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 20, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -904,7 +944,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 3006:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 20))
             {
                 if( msg != EQUIP_ERR_OK )
 					count20 -= noSpaceForCount;
@@ -918,7 +958,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count20,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 20, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -930,7 +970,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 3007:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 20))
             {
                 if( msg != EQUIP_ERR_OK )
 					count21 -= noSpaceForCount;
@@ -944,7 +984,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count21,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 20, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -1138,7 +1178,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 3015:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 30))
             {
                 if( msg != EQUIP_ERR_OK )
 					count29 -= noSpaceForCount;
@@ -1152,7 +1192,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count29,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 30, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -1164,7 +1204,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 3016:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 30))
             {
                 if( msg != EQUIP_ERR_OK )
 					count30 -= noSpaceForCount;
@@ -1178,7 +1218,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count30,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 30, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -1190,7 +1230,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 3017:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 30))
             {
                 if( msg != EQUIP_ERR_OK )
 					count31 -= noSpaceForCount;
@@ -1204,7 +1244,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count31,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 30, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -1216,7 +1256,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 3018:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 35))
             {
                 if( msg != EQUIP_ERR_OK )
 					count32 -= noSpaceForCount;
@@ -1230,7 +1270,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count32,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 35, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -1242,7 +1282,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 3019:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 35))
             {
                 if( msg != EQUIP_ERR_OK )
 					count33 -= noSpaceForCount;
@@ -1256,7 +1296,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count33,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 35, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -1268,7 +1308,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 3020:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 35))
             {
                 if( msg != EQUIP_ERR_OK )
 					count34 -= noSpaceForCount;
@@ -1282,7 +1322,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count34,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 35, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -1294,7 +1334,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 3021:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 35))
             {
                 if( msg != EQUIP_ERR_OK )
 					count35 -= noSpaceForCount;
@@ -1308,7 +1348,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count35,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 35, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -1320,7 +1360,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 3022:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 35))
             {
                 if( msg != EQUIP_ERR_OK )
 					count36 -= noSpaceForCount;
@@ -1334,7 +1374,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count36,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 35, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -1346,7 +1386,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 3023:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 35))
             {
                 if( msg != EQUIP_ERR_OK )
 					count37 -= noSpaceForCount;
@@ -1360,7 +1400,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count37,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 35, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -1372,7 +1412,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 3024:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 40))
             {
                 if( msg != EQUIP_ERR_OK )
 					count38 -= noSpaceForCount;
@@ -1386,7 +1426,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count38,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 40, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
@@ -1398,7 +1438,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
         break;
 		
 		case 3025:
-			if(player->HasItemCount(210000, 25))
+			if(player->HasItemCount(210000, 40))
             {
                 if( msg != EQUIP_ERR_OK )
 					count39 -= noSpaceForCount;
@@ -1412,7 +1452,33 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
                 {
                     player->CLOSE_GOSSIP_MENU();
                     player->SendNewItem(item,count39,false,true);
-                    player->DestroyItemCount(210000, 25, true);
+                    player->DestroyItemCount(210000, 40, true);
+					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
+                }
+            }
+            else
+            {
+                player->CLOSE_GOSSIP_MENU();
+                _Creature->MonsterSay("Du hast nicht genug Craenkland - Wertmarken!", LANG_UNIVERSAL, NULL);
+            }
+        break;
+		
+		case 3026:
+			if(player->HasItemCount(210000, 30))
+            {
+                if( msg != EQUIP_ERR_OK )
+					count41 -= noSpaceForCount;
+                {
+                    player->CLOSE_GOSSIP_MENU();
+					_Creature->MonsterSay("Kann Item nicht erstellen! Moeglicherweise hast Du dieses Item bereits in deinem Inventar?", LANG_UNIVERSAL, NULL);
+                }
+
+                item = player->StoreNewItem( dest41, itemId41, true, Item::GenerateItemRandomPropertyId(itemId1));
+				if(count41 > 0 && item)
+                {
+                    player->CLOSE_GOSSIP_MENU();
+                    player->SendNewItem(item,count41,false,true);
+                    player->DestroyItemCount(210000, 30, true);
 					_Creature->MonsterSay("Viel Spass damit.", LANG_UNIVERSAL, NULL);
                 }
             }
