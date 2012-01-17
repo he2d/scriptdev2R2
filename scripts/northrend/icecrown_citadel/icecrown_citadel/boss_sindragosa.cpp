@@ -53,7 +53,7 @@ enum BossSpells
     SPELL_FLY                = 59553,
     FROST_IMBUED_BLADE_AURA  = 72290,
 
-    //SPELL_BERSERK            = 47008,
+    SPELL_BERSERK            = 47008,
 
 // Rimefang
     SPELL_FROST_AURA         = 71387,
@@ -348,11 +348,11 @@ struct MANGOS_DLL_DECL boss_sindragosaAI : public BSWScriptedAI
                 break;
         }
 
-//        if (timedQuery(SPELL_BERSERK, diff))
-//        {
-//            doCast(SPELL_BERSERK);
-//            DoScriptText(-1631424,m_creature);
-//        };
+        if (timedQuery(SPELL_BERSERK, diff))
+        {
+            doCast(SPELL_BERSERK);
+            DoScriptText(-1631424,m_creature);
+        };
 
         DoMeleeAttackIfReady();
     }

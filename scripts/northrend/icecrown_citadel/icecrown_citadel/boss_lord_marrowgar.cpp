@@ -27,7 +27,7 @@ EndScriptData */
 enum
 {
     //common
-    //SPELL_BERSERK                           = 47008,
+    SPELL_BERSERK                           = 47008,
 
     //summons
     NPC_BONE_SPIKE                          = 38711,
@@ -274,11 +274,11 @@ struct MANGOS_DLL_DECL boss_lord_marrowgarAI : public BSWScriptedAI
                 break;
         }
 
-//        if (timedQuery(SPELL_BERSERK, diff))
-//        {
-//            doCast(SPELL_BERSERK);
-//            DoScriptText(-1631008, m_creature);
-//        }
+        if (timedQuery(SPELL_BERSERK, diff))
+        {
+            doCast(SPELL_BERSERK);
+            DoScriptText(-1631008, m_creature);
+        }
     }
 };
 
@@ -376,12 +376,12 @@ struct MANGOS_DLL_DECL mob_coldflameAI : public BSWScriptedAI
 
                 if (m_bIsXmode)
                 {
-                    m_creature->GetNearPoint2D(x, y, radius, m_fDirection);
+                    m_creature->GetNearPoint2D(x, y, radius, m_fDirection+M_PI_F/2);
                     doSummon(NPC_COLD_FLAME, x, y, m_creature->GetPositionZ(), TEMPSUMMON_TIMED_DESPAWN, getSpellData(SPELL_COLD_FLAME_1));
-                    //m_creature->GetNearPoint2D(x, y, radius, m_fDirection+M_PI_F);
-                    //doSummon(NPC_COLD_FLAME, x, y, m_creature->GetPositionZ(), TEMPSUMMON_TIMED_DESPAWN, getSpellData(SPELL_COLD_FLAME_1));
-                    //m_creature->GetNearPoint2D(x, y, radius, m_fDirection+M_PI_F*1.5f);
-                    //doSummon(NPC_COLD_FLAME, x, y, m_creature->GetPositionZ(), TEMPSUMMON_TIMED_DESPAWN, getSpellData(SPELL_COLD_FLAME_1));
+                    m_creature->GetNearPoint2D(x, y, radius, m_fDirection+M_PI_F);
+                    doSummon(NPC_COLD_FLAME, x, y, m_creature->GetPositionZ(), TEMPSUMMON_TIMED_DESPAWN, getSpellData(SPELL_COLD_FLAME_1));
+                    m_creature->GetNearPoint2D(x, y, radius, m_fDirection+M_PI_F*1.5f);
+                    doSummon(NPC_COLD_FLAME, x, y, m_creature->GetPositionZ(), TEMPSUMMON_TIMED_DESPAWN, getSpellData(SPELL_COLD_FLAME_1));
                 }
             }
             else

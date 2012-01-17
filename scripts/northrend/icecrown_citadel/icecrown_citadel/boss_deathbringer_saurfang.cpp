@@ -26,15 +26,15 @@ EndScriptData */
 enum
 {
         //common
-        //SPELL_BERSERK                           = 47008,
+        SPELL_BERSERK                           = 47008,
         //yells
         //summons
         NPC_BLOOD_BEASTS                        = 38508,
         //Abilities
         SPELL_BLOOD_LINK                        = 72178,
         SPELL_BLOOD_POWER                       = 72371,
-        //SPELL_MARK                              = 72293,
-        //SPELL_MARK_SELF                         = 72256,
+        SPELL_MARK                              = 72293,
+        SPELL_MARK_SELF                         = 72256,
         SPELL_FRENZY                            = 72737,
         SPELL_BOILING_BLOOD                     = 72385,
         SPELL_BLOOD_NOVA                        = 72380,
@@ -160,7 +160,7 @@ struct MANGOS_DLL_DECL boss_deathbringer_saurfangAI : public BSWScriptedAI
             return;
         pInstance->SetData(TYPE_SAURFANG, DONE);
         DoScriptText(-1631106,m_creature);
-//        doRemoveFromAll(SPELL_MARK);
+        doRemoveFromAll(SPELL_MARK);
     }
 
     void UpdateAI(const uint32 diff)
@@ -174,8 +174,8 @@ struct MANGOS_DLL_DECL boss_deathbringer_saurfangAI : public BSWScriptedAI
         if (!m_creature->HasAura(SPELL_BLOOD_LINK))
             doCast(SPELL_BLOOD_LINK);
 
-//        if (!m_creature->HasAura(SPELL_MARK_SELF))
-//            doCast(SPELL_MARK_SELF);
+        if (!m_creature->HasAura(SPELL_MARK_SELF))
+            doCast(SPELL_MARK_SELF);
 
         switch(getStage())
         {
@@ -196,11 +196,11 @@ struct MANGOS_DLL_DECL boss_deathbringer_saurfangAI : public BSWScriptedAI
                     break;
         }
 
-//            if (timedQuery(SPELL_MARK, diff))
-//            {
-//                if (Unit* pTarget = doSelectRandomPlayer(SPELL_MARK,false,120.0f))
-//                    doCast(SPELL_MARK, pTarget);
-//            }
+            if (timedQuery(SPELL_MARK, diff))
+            {
+                if (Unit* pTarget = doSelectRandomPlayer(SPELL_MARK,false,120.0f))
+                    doCast(SPELL_MARK, pTarget);
+            }
 
             timedCast(SPELL_BLOOD_NOVA, diff);
 
@@ -233,11 +233,11 @@ struct MANGOS_DLL_DECL boss_deathbringer_saurfangAI : public BSWScriptedAI
                 };
             };
 
-//        if (timedQuery(SPELL_BERSERK, diff))
-//        {
-//            doCast(SPELL_BERSERK);
-//            DoScriptText(-1631108,m_creature);
-//        };
+        if (timedQuery(SPELL_BERSERK, diff))
+        {
+            doCast(SPELL_BERSERK);
+            DoScriptText(-1631108,m_creature);
+        };
 
         DoMeleeAttackIfReady();
     }
