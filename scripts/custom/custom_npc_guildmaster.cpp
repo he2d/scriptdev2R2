@@ -157,7 +157,7 @@ bool showBuyList(Player *player, Creature *_creature, uint32 showFromId = 0)
 
 		delete result;
 
-		player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, _creature->GetGUID());
+		player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, _creature->GetObjectGuid());
 
 		return true;
 	}
@@ -279,7 +279,7 @@ bool GossipHello_custom_npc_guildmaster(Player *player, Creature *_creature)
 			player->PlayerTalkClass->GetGossipMenu().AddMenuItem(ICON_GOSSIP_GOLD, MSG_GOSSIP_SELL, GOSSIP_SENDER_MAIN, ACTION_SELL_GUILDHOUSE, 0, false);
 		}
 	}
-	player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, _creature->GetGUID());
+	player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, _creature->GetObjectGuid());
 	return true;
 }
 

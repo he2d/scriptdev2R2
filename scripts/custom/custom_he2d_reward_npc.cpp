@@ -17,7 +17,7 @@ bool GossipHello_custom_he2d_reward_npc(Player *player, Creature *_Creature)
     //player->ADD_GOSSIP_ITEM( 10, "FREE"											, GOSSIP_SENDER_MAIN, 4000);
     //player->ADD_GOSSIP_ITEM( 10, "FREE"											, GOSSIP_SENDER_MAIN, 5000);
 
-	player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetGUID());
+	player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetObjectGuid());
     return true;
 }
 
@@ -304,7 +304,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
 			//player->ADD_GOSSIP_ITEM( 10, "FREE"								, GOSSIP_SENDER_MAIN, 4000);
 			//player->ADD_GOSSIP_ITEM( 10, "FREE"								, GOSSIP_SENDER_MAIN, 5000);
 
-			player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetGUID());
+			player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetObjectGuid());
 		}
 		break;
 
@@ -314,7 +314,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
 			player->ADD_GOSSIP_ITEM( 2, "FLYMOUNTS"								, GOSSIP_SENDER_MAIN, 1200);
 			player->ADD_GOSSIP_ITEM( 4, "[MAINMENU]"							, GOSSIP_SENDER_MAIN, 6000);
 
-			player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetGUID());
+			player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetObjectGuid());
 		}
 		break;
 
@@ -336,7 +336,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
 			player->ADD_GOSSIP_ITEM( 4, "[BACK]"								, GOSSIP_SENDER_MAIN, 1000);
 			player->ADD_GOSSIP_ITEM( 4, "[MAINMENU]"							, GOSSIP_SENDER_MAIN, 6000);
 
-			player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetGUID());
+			player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetObjectGuid());
 		}
 		break;
 
@@ -350,7 +350,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
 			player->ADD_GOSSIP_ITEM( 4, "[BACK]"								, GOSSIP_SENDER_MAIN, 1000);
 			player->ADD_GOSSIP_ITEM( 4, "[MAINMENU]"							, GOSSIP_SENDER_MAIN, 6000);
 
-			player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetGUID());
+			player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetObjectGuid());
 		}
 		break;
 
@@ -361,7 +361,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
 			player->ADD_GOSSIP_ITEM( 3, "Urtuemliches Saronit  -  25 Wertmarken"				, GOSSIP_SENDER_MAIN, 2003);
 			player->ADD_GOSSIP_ITEM( 4, "[MAINMENU]"							, GOSSIP_SENDER_MAIN, 6000);
 
-			player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetGUID());
+			player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetObjectGuid());
 		}
 		break;
 		
@@ -395,7 +395,7 @@ void SendDefaultMenu_custom_he2d_reward_npc(Player *player, Creature *_Creature,
 			player->ADD_GOSSIP_ITEM( 7, "Mini-Thor  -  40 Wertmarken"								, GOSSIP_SENDER_MAIN, 3025);
 			player->ADD_GOSSIP_ITEM( 4, "[MAINMENU]"							, GOSSIP_SENDER_MAIN, 6000);
 
-			player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetGUID());
+			player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetObjectGuid());
 		}
 		break;
 		

@@ -35,7 +35,6 @@ enum
     EMOTE_SCREECH   = -1603115,
     EMOTE_DEFENDER  = -1603116,
 
-    SPELL_BERSERK                = 47008,
     //sanctum sentry
     SPELL_RIP_FLESH                     = 64375,
     SPELL_RIP_FLESH_H                   = 64667,

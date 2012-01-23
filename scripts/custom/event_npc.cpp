@@ -25,7 +25,7 @@ bool GossipHello_npc_event_quest_port(Player *player, Creature *_Creature)
         player->ADD_GOSSIP_ITEM( 7, "[Event-Teleports] ->"			, GOSSIP_SENDER_MAIN, 5550);
         player->ADD_GOSSIP_ITEM( 7, "[Other-Teleports] ->"			, GOSSIP_SENDER_MAIN, 5554);
         }
-    player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetGUID());
+    player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetObjectGuid());
     return true;
 }
 
@@ -53,7 +53,7 @@ void SendDefaultMenu_npc_event_quest_port(Player *player, Creature *_Creature, u
             player->ADD_GOSSIP_ITEM( 5, "Scarlet Monastery. 20 Silver"       , GOSSIP_SENDER_MAIN, 1257);
             player->ADD_GOSSIP_ITEM( 7, "[More] ->"							 , GOSSIP_SENDER_MAIN, 5551);*/
             player->ADD_GOSSIP_ITEM( 7, "<- [Hauptmenu]"					 , GOSSIP_SENDER_MAIN, 5552);	
-            player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetGUID());
+            player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetObjectGuid());
             break;
         /*case 5551: //More Instances
             player->ADD_GOSSIP_ITEM( 5, "Uldaman. 30 Silver"                   , GOSSIP_SENDER_MAIN, 1258);
@@ -107,7 +107,7 @@ player->ADD_GOSSIP_ITEM( 7, "<- [Event-Teleports]"							   , GOSSIP_SENDER_MAIN
 player->ADD_GOSSIP_ITEM( 7, "<- [Hauptmenu]"					   , GOSSIP_SENDER_MAIN, 5552);
 
 
-player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetGUID());
+player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetObjectGuid());
 
 break;
 
@@ -139,7 +139,7 @@ player->ADD_GOSSIP_ITEM( 7, "[Event-Teleports] ->"				, GOSSIP_SENDER_MAIN, 5550
 player->ADD_GOSSIP_ITEM( 7, "[Other-Teleports] ->"			, GOSSIP_SENDER_MAIN, 5554);
 	}
 
-player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetGUID());
+player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE,_Creature->GetObjectGuid());
 
 break;
 

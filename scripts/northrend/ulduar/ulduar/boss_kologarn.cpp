@@ -63,7 +63,7 @@ enum
     SPELL_EYEBEAM_VISUAL_LEFT_2 = 63702,
     SPELL_EYEBEAM_VISUAL_RIGHT  = 63676,
 
-    // SPELL_ENRAGE                = 26662,
+    SPELL_ENRAGE                = 26662,
     //left arm
     SPELL_ARM_SWEEP             = 63766,
     SPELL_ARM_SWEEP_H           = 63983,
