@@ -260,7 +260,6 @@ struct MANGOS_DLL_DECL boss_telestraAI : public ScriptedAI
                 }
                 else
                     m_uiGravityWellTimer -= uiDiff;
-				m_creature->SelectAttackingTarget(ATTACKING_TARGET_RANDOM, 0);
 
                 break;
             }
