@@ -271,6 +271,9 @@ struct boss_skadi_graufAI : public ScriptedAI
 
     void MovementInform(uint32 uiMovementType, uint32 uiData)
     {
+        if (uiMovementType != POINT_MOTION_TYPE)
+            return;
+
         switch(uiData)
         {
             case 1: // short after start
@@ -316,7 +319,11 @@ struct boss_skadi_graufAI : public ScriptedAI
             default:
                 uiWaypointId = 0;
                 uiMovementTimer = 1000;
+                break;
         }
+
+        if ( uiWaypointId > 6 )
+            error_log("SD2: Instance Pinnacle: Skadi Grauf try move to point %u!", uiWaypointId);
     }
 
     void JustDied(Unit* pTarget)
@@ -358,7 +365,7 @@ struct boss_skadi_graufAI : public ScriptedAI
 
     void UpdateAI(const uint32 uiDiff)
     {
-        if (!m_creature->SelectHostileTarget() || !m_creature->getVictim())
+        if (!m_creature->getVictim() || (!uiWaypointId && !m_creature->SelectHostileTarget()))
             return;
 
         if (vehicle->GetPassenger(0) && !isInFlight)
@@ -376,7 +383,8 @@ struct boss_skadi_graufAI : public ScriptedAI
             if (uiMovementTimer < uiDiff)
             {
                 m_creature->GetMotionMaster()->Clear(true,true);
-                m_creature->GetMotionMaster()->MovePoint(uiWaypointId, FlightPosition[uiWaypointId].x, FlightPosition[uiWaypointId].y, FlightPosition[uiWaypointId].z);
+                if ( uiWaypointId < 7)
+                    m_creature->GetMotionMaster()->MovePoint(uiWaypointId, FlightPosition[uiWaypointId].x, FlightPosition[uiWaypointId].y, FlightPosition[uiWaypointId].z);
                 uiMovementTimer = 20000;
             }
             else
