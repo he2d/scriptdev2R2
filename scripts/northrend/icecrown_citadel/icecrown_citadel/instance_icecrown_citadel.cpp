@@ -17,7 +17,11 @@
 /* ScriptData
 SDName: instance_icecrown_spire
 SD%Complete: 90%
-SDComment: by /dev/rsa
+SDComment:  by michalpolko with special thanks to:
+            mangosR2 team and all who are supporting us with feedback, testing and fixes
+            TrinityCore for some info about spells IDs
+            everybody whom I forgot to mention here ;)
+
 SDCategory: Icecrown Citadel
 EndScriptData */
 
@@ -330,8 +334,6 @@ void instance_icecrown_spire::SetData(uint32 uiType, uint32 uiData)
          case TYPE_PUTRICIDE:
             m_auiEncounter[TYPE_PUTRICIDE] = uiData;
 
-            DoUseDoorOrButton(GO_SCIENTIST_DOOR);
-
             if (uiData == DONE)
             {
                 if (m_auiEncounter[TYPE_SINDRAGOSA] == DONE &&
@@ -340,6 +342,36 @@ void instance_icecrown_spire::SetData(uint32 uiType, uint32 uiData)
                     m_auiEncounter[TYPE_KINGS_OF_ICC] = DONE;
                 }
             }
+
+            {
+                // Proff sometimes does't trigger door, so let's check it explicitly
+                GameObject* pDoor = GetSingleGameObjectFromStorage(GO_SCIENTIST_DOOR);
+                if (pDoor)
+                {
+                    switch (uiData)
+                    {
+                        case IN_PROGRESS:
+                        case SPECIAL:
+                        {
+                            // Close door if it's open
+                            if (pDoor->getLootState() != GO_ACTIVATED)
+                                DoUseDoorOrButton(GO_SCIENTIST_DOOR);
+                            break;
+                        }
+                        case NOT_STARTED:
+                        case FAIL:
+                        case DONE:
+                        {
+                            // Open door if it's closed
+                            if (pDoor->getLootState() != GO_READY)
+                                DoUseDoorOrButton(GO_SCIENTIST_DOOR);
+                            break;
+                        }
+                        default: break;
+                    }
+                }
+            }
+
             break;
          case TYPE_BLOOD_COUNCIL:
             m_auiEncounter[TYPE_BLOOD_COUNCIL] = uiData;

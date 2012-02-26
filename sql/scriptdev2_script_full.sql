@@ -649,7 +649,7 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,commen
 (-1000610,'The mosswalker victim groans in pain.',0,2,0,0,'mosswalker victim EMOTE_PAIN'),
 
 (-1000611,'Maybe you make weather better too?',0,0,0,0,'mosswalker victim SAY_RESCUE_1'),
-(-1000612,'We saved. You nice, $N.',0,0,0,0,'mosswalker victim SAY_RESCUE_2'),
+(-1000612,'We saved. You nice, dryskin.',0,0,0,0,'mosswalker victim SAY_RESCUE_2'),
 (-1000613,'You save us! Yay for you!',0,0,0,0,'mosswalker victim SAY_RESCUE_3'),
 (-1000614,'Thank you! You good!',0,0,0,0,'mosswalker victim SAY_RESCUE_4'),
 
@@ -839,7 +839,20 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,commen
 
 (-1000781,'I knew Lurielle would send help! Thank you, friend, and give Lurielle my thanks as well!',0,0,0,0,'Chill Nymph SAY_FREE_1'),
 (-1000782,'Where am I? What happend to me? You... you freed me?',0,0,0,0,'Chill Nymph SAY_FREE_2'),
-(-1000783,'Thank you. I thought I would die without seeing my sisters again!',0,0,0,0,'Chill Nymph SAY_FREE_3');
+(-1000783,'Thank you. I thought I would die without seeing my sisters again!',0,0,0,0,'Chill Nymph SAY_FREE_3'),
+
+(-1000784,'Thanks $N. Now let\'s get out of here!',0,0,0,0,'melizza SAY_MELIZZA_START'),
+(-1000785,'We made it! Thanks again! I\'m going to run ahead!',0,0,0,0,'melizza SAY_MELIZZA_FINISH'),
+(-1000786,'Hey Hornizz! I\'m back! And there are some people behind me who helped me out of a jam.',0,0,0,1,'melizza SAY_MELIZZA_1'),
+(-1000787,'We\'re going to have to scratch the Maraudines off our list. Too hard to work with...',0,0,0,1,'melizza SAY_MELIZZA_2'),
+(-1000788,'Well, I\'m off to the Gelkis. They\'re not as dumb as the Maraudines, but they\'re more reasonable.',0,0,0,3,'melizza SAY_MELIZZA_3'),
+
+(-1000789,'Well, now or never I suppose. Remember, once we get to the road safety, return to Terenthis to let him know we escaped.',0,0,0,0,'volcor SAY_START'),
+(-1000790,'We made it, My friend. Remember to find Terenthis and let him know we\'re safe. Thank you again.',0,0,0,0,'volcor SAY_END'),
+(-1000791,'Here they come.',0,0,0,0,'volcor SAY_FIRST_AMBUSH'),
+(-1000792,'We can overcome these foul creatures.',0,0,0,0,'volcor SAY_AGGRO_1'),
+(-1000793,'We shall earn our deaths at the very least!',0,0,0,0,'volcor SAY_AGGRO_2'),
+(-1000794,'Don\'t give up! Fight, to the death!',0,0,0,0,'volcor SAY_AGGRO_3');
 
 -- -1 033 000 SHADOWFANG KEEP
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,comment) VALUES
@@ -866,7 +879,14 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,commen
 (-1033016,'Arrrgh!',0,0,0,0,'deathstalker vincent SAY_VINCENT_DIE'),
 (-1033017,'You, too, shall serve!',5793,1,0,0,'boss_arugal YELL_AGGRO'),
 (-1033018,'Another Falls!',5795,1,0,0,'boss_arugal YELL_KILLED_PLAYER'),
-(-1033019,'Release your rage!',5797,1,0,0,'boss_arugal YELL_COMBAT');
+(-1033019,'Release your rage!',5797,1,0,0,'boss_arugal YELL_COMBAT'),
+
+(-1033020,'Did they bother to tell you who I am and why I am doing this?',0,0,0,0,'hummel SAY_INTRO_1'),
+(-1033021,'...or are they just using you like they do everybody else?',0,0,0,0,'hummel SAY_INTRO_2'),
+(-1033022,'But what does it matter. It is time for this to end.',0,0,0,0,'hummel SAY_INTRO_3'),
+(-1033023,'Baxter! Get in there and help! NOW!',0,0,0,0,'hummel SAY_CALL_BAXTER'),
+(-1033024,'It is time, Frye! Attack!',0,0,0,0,'hummel SAY_CALL_FRYE'),
+(-1033025,'...please don\'t think less of me.',0,0,0,0,'hummel SAY_DEATH');
 
 -- -1 034 000 STOCKADES
 
@@ -1048,7 +1068,23 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,commen
 (-1229000,'%s begins to regain its strength!',0,2,0,0,'pyroguard EMOTE_BEGIN'),
 (-1229001,'%s is nearly at full strength!',0,2,0,0,'pyroguard EMOTE_NEAR'),
 (-1229002,'%s regains its power and breaks free of its bonds!',0,2,0,0,'pyroguard EMOTE_FULL'),
-(-1229003,'Ha! Ha! Ha! Thank you for freeing me, fools. Now let me repay you by charring the flesh from your bones.',0,1,0,0,'pyroguard SAY_FREE');
+(-1229003,'Ha! Ha! Ha! Thank you for freeing me, fools. Now let me repay you by charring the flesh from your bones.',0,1,0,0,'pyroguard SAY_FREE'),
+
+(-1229004,'Excellent... it would appear as if the meddlesome insects have arrived just in time to feed my legion. Welcome, mortals!',0,1,0,0,'nefarius SAY_INTRO_1'),
+(-1229005,'Let not even a drop of their blood remain upon the arena floor, my children. Feast on their souls!',0,1,0,0,'nefarius SAY_INTRO_2'),
+(-1229006,'Foolsss...Kill the one in the dress!',0,1,0,0,'nefarius SAY_ATTACK_1'),
+(-1229007,'Sire, let me join the fray! I shall tear their spines out with my bare hands!',0,1,0,0,'rend SAY_REND_JOIN'),
+(-1229008,'Concentrate your attacks upon the healer!',0,1,0,0,'nefarius SAY_ATTACK_2'),
+(-1229009,'Inconceivable!',0,1,0,0,'nefarius SAY_ATTACK_3'),
+(-1229010,'Do not force my hand, children! I shall use your hides to line my boots.',0,1,0,0,'nefarius SAY_ATTACK_4'),
+(-1229011,'Defilers!',0,1,0,0,'rend SAY_LOSE_1'),
+(-1229012,'Impossible!',0,1,0,0,'rend SAY_LOSE_2'),
+(-1229013,'Your efforts will prove fruitless. None shall stand in our way!',0,1,0,0,'nefarius SAY_LOSE_3'),
+(-1229014,'THIS CANNOT BE!!! Rend, deal with these insects.',0,1,0,0,'nefarius SAY_LOSE_4'),
+(-1229015,'With pleasure...',0,1,0,0,'rend SAY_REND_ATTACK'),
+(-1229016,'The Warchief shall make quick work of you, mortals. Prepare yourselves!',0,1,0,0,'nefarius SAY_WARCHIEF'),
+(-1229017,'Taste in my power!',0,1,0,0,'nefarius SAY_BUFF_GYTH'),
+(-1229018,'Your victory shall be short lived. The days of both the Alliance and Horde are coming to an end. The next time we meet shall be the last.',0,1,0,0,'nefarius SAY_VICTORY');
 
 -- -1 230 000 BLACKROCK DEPTHS
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,comment) VALUES
@@ -1834,7 +1870,9 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,commen
 (-1545020,'Ba\'ahntha sol\'dorei!',10394,1,0,0,'kalithresh SAY_AGGRO3'),
 (-1545021,'Scram, surface filth!',10395,1,0,0,'kalithresh SAY_SLAY1'),
 (-1545022,'Ah ha ha ha ha ha ha!',10396,1,0,0,'kalithresh SAY_SLAY2'),
-(-1545023,'For her Excellency... for... Vashj!',10397,1,0,0,'kalithresh SAY_DEATH');
+(-1545023,'For her Excellency... for... Vashj!',10397,1,0,0,'kalithresh SAY_DEATH'),
+
+(-1545024,'Enjoy the storm, warm bloods!',0,1,0,0,'thespia SAY_CLOUD');
 
 -- -1 546 000 THE UNDERBOG
 
@@ -6316,5 +6354,49 @@ INSERT INTO script_waypoint VALUES
 (4484, 30, 4224.28, 100.02, 35.49, 10000, 'SAY_QUEST_END'),
 (4484, 31, 4243.45, 117.44, 38.83, 0, ''),
 (4484, 32, 4264.18, 134.22, 42.96, 0, '');
+
+DELETE FROM script_waypoint WHERE entry=12277;
+INSERT INTO script_waypoint VALUES
+(12277, 1, -1154.87, 2708.16, 111.123, 1000, 'SAY_MELIZZA_START'),
+(12277, 2, -1162.62, 2712.86, 111.549, 0, ''),
+(12277, 3, -1183.37, 2709.45, 111.601, 0, ''),
+(12277, 4, -1245.09, 2676.43, 111.572, 0, ''),
+(12277, 5, -1260.54, 2672.48, 111.55, 0, ''),
+(12277, 6, -1272.71, 2666.38, 111.555, 0, ''),
+(12277, 7, -1342.95, 2580.82, 111.557, 0, ''),
+(12277, 8, -1362.24, 2561.74, 110.848, 0, ''),
+(12277, 9, -1376.56, 2514.06, 95.6146, 0, ''),
+(12277, 10, -1379.06, 2510.88, 93.3256, 0, ''),
+(12277, 11, -1383.14, 2489.17, 89.009, 0, ''),
+(12277, 12, -1395.34, 2426.15, 88.6607, 0, 'SAY_MELIZZA_FINISH'),
+(12277, 13, -1366.23, 2317.17, 91.8086, 0, ''),
+(12277, 14, -1353.81, 2213.52, 90.726, 0, ''),
+(12277, 15, -1354.19, 2208.28, 88.7386, 0, ''),
+(12277, 16, -1354.59, 2193.77, 77.6702, 0, ''),
+(12277, 17, -1367.62, 2160.64, 67.1482, 0, ''),
+(12277, 18, -1379.44, 2132.77, 64.1326, 0, ''),
+(12277, 19, -1404.81, 2088.68, 61.8162, 0, 'SAY_MELIZZA_1'),
+(12277, 20, -1417.15, 2082.65, 62.4112, 0, ''),
+(12277, 21, -1423.28, 2074.19, 62.2046, 0, ''),
+(12277, 22, -1432.99, 2070.56, 61.7811, 0, ''),
+(12277, 23, -1469.27, 2078.68, 63.1141, 0, ''),
+(12277, 24, -1507.21, 2115.12, 62.3578, 0, '');
+
+DELETE FROM script_waypoint WHERE entry=3692;
+INSERT INTO script_waypoint VALUES
+(3692, 1, 4608.54, -6.47, 69.69, 4000, 'SAY_START'),
+(3692, 2, 4604.54, -5.17, 69.51, 0, ''),
+(3692, 3, 4604.26, -2.02, 69.42, 0, ''),
+(3692, 4, 4607.75, 3.79, 70.13, 1000, 'first ambush'),
+(3692, 5, 4607.75, 3.79, 70.13, 0, 'SAY_FIRST_AMBUSH'),
+(3692, 6, 4619.77, 27.47, 70.40, 0, ''),
+(3692, 7, 4626.28, 42.46, 68.75, 0, ''),
+(3692, 8, 4633.13, 51.17, 67.40, 0, ''),
+(3692, 9, 4639.67, 79.03, 61.74, 0, ''),
+(3692, 10, 4647.54, 94.25, 59.92, 0, 'second ambush'),
+(3692, 11, 4682.08, 113.47, 54.83, 0, ''),
+(3692, 12, 4705.28, 137.81, 53.36, 0, 'last ambush'),
+(3692, 13, 4730.30, 158.76, 52.33, 0, ''),
+(3692, 14, 4756.47, 195.65, 53.61, 10000, 'SAY_END');
 
 -- EOF
