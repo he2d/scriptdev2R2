@@ -348,6 +348,24 @@
     <ClCompile Include="..\scripts\custom\teleguy.cpp">
       <Filter>scripts\custom</Filter>
     </ClCompile>
+	<ClCompile Include="..\scripts\custom\custom_he2d_reward_npc.cpp">
+      <Filter>scripts\custom</Filter>
+    </ClCompile>
+	<ClCompile Include="..\scripts\custom\custom_npc_guildmaster.cpp">
+      <Filter>scripts\custom</Filter>
+    </ClCompile>
+	<ClCompile Include="..\scripts\custom\custom_oster_boss.cpp">
+      <Filter>scripts\custom</Filter>
+    </ClCompile>
+	<ClCompile Include="..\scripts\custom\custom_winter_boss_yeti.cpp">
+      <Filter>scripts\custom</Filter>
+    </ClCompile>
+	<ClCompile Include="..\scripts\custom\event_npc.cpp">
+      <Filter>scripts\custom</Filter>
+    </ClCompile>
+	<ClCompile Include="..\scripts\custom\npc_lightwell.cpp">
+      <Filter>scripts\custom</Filter>
+    </ClCompile>
     <ClCompile Include="..\scripts\eastern_kingdoms\alterac_mountains.cpp">
       <Filter>scripts\eastern_kingdoms</Filter>
     </ClCompile>

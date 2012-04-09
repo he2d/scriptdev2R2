@@ -457,6 +457,10 @@
 					RelativePath="..\scripts\custom\custom_he2d_reward_npc.cpp"
 					>
 				</File>
+				<File
+					RelativePath="..\scripts\custom\custom_oster_boss.cpp"
+					>
+				</File>
 			</Filter>
 			<Filter
 				Name="eastern_kingdoms"
