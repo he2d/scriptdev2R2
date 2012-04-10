@@ -8,7 +8,7 @@ enum
 	SPELL_KUGELBLITZ					= 44190, // 4113 to 5287 Naturschaden
 	SPELL_EISKALTE						= 20712, // 6000 schaden 10 Sek. lang bewegungsunfähig.
 	
-	GO_DEVIL_EASTER_EGG					= 889904,
+	//GO_DEVIL_EASTER_EGG					= 889904,
 	SPELL_ELITE							= 71195  // Spell Elite
 };
 
@@ -23,9 +23,9 @@ struct MANGOS_DLL_DECL boss_custom_osterAI : public ScriptedAI
 	uint32 Kugelblitz_Timer;
 	uint32 Eiskalte_Timer;
 	
-	void OnObjectCreate(GameObject* pGo);
+	//void OnObjectCreate(GameObject* pGo);
 
-	uint32 m_uiDEVILEASTEREGG;
+	//uint32 m_uiDEVILEASTEREGG;
 	
 	void Reset()
 	{
@@ -149,12 +149,12 @@ struct MANGOS_DLL_DECL boss_custom_osterAI : public ScriptedAI
 				m_creature->MonsterYell("Ihr macht mich wahnsinnig!", LANG_UNIVERSAL);
 				DoCast(m_creature,SPELL_ELITE);
 			}
-			m_uiDEVILEASTEREGG = GO_DEVIL_EASTER_EGG;
-			if (GameObject* pChest = m_creature->GetSingleGameObjectFromStorage(m_uiDEVILEASTEREGG))
-                {
-                    if (pChest && !pChest->isSpawned())
-                        pChest->SetRespawnTime(7*DAY);
-                }
+			// m_uiDEVILEASTEREGG = GO_DEVIL_EASTER_EGG;
+			// if (GameObject* pChest = m_creature->GetSingleGameObjectFromStorage(m_uiDEVILEASTEREGG))
+               // {
+                 //   if (pChest && !pChest->isSpawned())
+                   //     pChest->SetRespawnTime(7*DAY);
+                // }
 		}
 		
 	DoMeleeAttackIfReady();
