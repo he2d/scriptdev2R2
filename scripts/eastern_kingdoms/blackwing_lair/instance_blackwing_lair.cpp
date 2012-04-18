@@ -69,14 +69,11 @@ void instance_blackwing_lair::OnObjectCreate(GameObject* pGo)
     {
         case GO_DOOR_RAZORGORE_ENTER:
         case GO_ORB_OF_DOMINATION:
+        case GO_DOOR_NEFARIAN:
             break;
         case GO_DOOR_RAZORGORE_EXIT:
             if (m_auiEncounter[TYPE_RAZORGORE] == DONE)
                 pGo->SetGoState(GO_STATE_ACTIVE);
-            break;
-        case GO_DOOR_NEFARIAN:
-        case GO_DOOR_CHROMAGGUS_ENTER:
-        case GO_DOOR_CHROMAGGUS_SIDE:
             break;
         case GO_DOOR_CHROMAGGUS_EXIT:
             if (m_auiEncounter[TYPE_CHROMAGGUS] == DONE)
@@ -112,8 +109,7 @@ void instance_blackwing_lair::SetData(uint32 uiType, uint32 uiData)
             else if (uiData == FAIL)
             {
                 // Reset the Orb of Domination and the eggs
-                if (GameObject* pOrb = GetSingleGameObjectFromStorage(GO_ORB_OF_DOMINATION))
-                    pOrb->SetFlag(GAMEOBJECT_FLAGS, GO_FLAG_NO_INTERACT);
+                DoToggleGameObjectFlags(GO_ORB_OF_DOMINATION, GO_FLAG_NO_INTERACT, true);
 
                 // ToDo: reset the Dragon Eggs
             }
@@ -138,7 +134,6 @@ void instance_blackwing_lair::SetData(uint32 uiType, uint32 uiData)
             break;
         case TYPE_CHROMAGGUS:
             m_auiEncounter[uiType] = uiData;
-            DoUseDoorOrButton(GO_DOOR_CHROMAGGUS_ENTER);
             if (uiData == DONE)
                 DoUseDoorOrButton(GO_DOOR_CHROMAGGUS_EXIT);
             break;
@@ -199,8 +194,7 @@ void instance_blackwing_lair::OnCreatureDeath(Creature* pCreature)
 {
     if (pCreature->GetEntry() == NPC_GRETHOK_CONTROLLER)
     {
-        if (GameObject* pOrb = GetSingleGameObjectFromStorage(GO_ORB_OF_DOMINATION))
-            pOrb->RemoveFlag(GAMEOBJECT_FLAGS, GO_FLAG_NO_INTERACT);
+        DoToggleGameObjectFlags(GO_ORB_OF_DOMINATION, GO_FLAG_NO_INTERACT, false);
 
         if (Creature* pOrbTrigger = GetSingleCreatureFromStorage(NPC_BLACKWING_ORB_TRIGGER))
             pOrbTrigger->InterruptNonMeleeSpells(false);
